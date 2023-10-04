@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Permissions</title>
+        <style>
+body {
+padding: 0;
+margin: 0;
+background-color: rgba(30, 30, 30, 1);
+overflow-x: hidden;
+overflow-y: auto;
+}
+
+.form {
+    background-color: rgba(30, 30, 30, 1);
+    padding: 20px 10px;
+    border-radius: 5px;
+    text-align: center; 
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: x-large;
+}
+
+input {
+    width: 50%;
+    padding: 3%;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.navbar {
+  overflow: hidden;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 1);
+  margin-top: 0px;
+  padding: 1.5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex; 
+  align-items: center; 
+  margin-right: 20px; 
+}
+
+.login-btn-txt {
+  color: rgb(0, 0, 0);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: large;
+  text-decoration: none;
+  margin-right: 20px; 
+  border-radius: 5px;
+  color: #fff;
+/* background-color: rgb(255, 255, 255); */
+}
+
+.logo {
+  color: white;
+  font-weight: 500;
+  font-size: xx-large;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  margin-right: 20px; 
+}
+
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+                <a href="home.html" class="logo">Mav Program</a>
+                <div class="nav-items">
+                    <a href="home.html" class="login-btn-txt">Home</a>
+                </div>
+                <div class="nav-items">
+                    <a href="permissions.html" class="login-btn-txt">Permissions</a>
+                </div>
+                <div class="nav-items">
+                    <a href="chat.html" class="login-btn-txt">Chat</a>
+                </div>
+                <div class="nav-items">
+                    <a href="accounts.html" class="login-btn-txt">user accounts</a>
+                </div>
+                <div class="nav-items">
+                  <a href="assessment.html" class="login-btn-txt">Edit Assessments</a>
+              </div>
+              <div class="nav-items">
+                <a href="viewassess.html" class="login-btn-txt">View Assessments</a>
+            </div>
+              <div class="nav-items">
+                <a href="course.html" class="login-btn-txt">Course</a>
+            </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="form">
+                <br><br><br><br>
+                <form>
+                    <label for="permission_name">Permission Name</label>
+                    <input type="text" name="permission_name"><br>
+                    <label for="permission_value">Value</label>
+                    <input type="text" name = permission_value><br>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </section>
+
+    </body>
+</html>

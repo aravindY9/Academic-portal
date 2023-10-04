@@ -1,0 +1,471 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar-index {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    padding: 1.5%;
+    width: 100%;
+}
+.navbar-about, .navbar-contact, .navbar-coord, .navbar-services {
+    overflow: hidden;
+        align-items: center;
+        background-color: rgba(50, 50, 50, 1);
+        margin-top: 0px;
+        padding: 1.5%;
+        width: 100%;
+}
+
+.navbar-nav
+{
+    text-align: center;
+        background-color: rgba(50, 50, 50, 1);
+        margin-top: 0px;
+        padding: 1.5%;
+        width: 100%;
+}
+.logo-index, .logo-nav {
+    color: white;
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+.logo-about, .logo-contact, .logo-coord, .logo-services {
+    float: left;
+    color: white;
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif; 
+    margin-right: 2%;
+    margin-left: 0px;
+}
+
+.login-btn-about, .login-btn-contact, .login-btn-coord, .login-btn-services {
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-right: 3%;
+    padding: 0.5%;
+}
+
+.login-btn-txt-about, .login-btn-txt-contact, .login-btn-txt-coord, .login-btn-txt-services {
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: large;
+    text-decoration: none;
+    margin-right: 0px;
+}
+
+.student-login-txt {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 400%;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.college-banner-index {
+    display: flex;
+    justify-content: first baseline;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0)), url("photos/college_banner1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 8%;
+    padding-bottom: 2%;
+}
+
+.college-banner-about {
+    display: flex;
+    justify-content: first baseline;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0)), url("photos/college_banner2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 8%;
+    padding-bottom: 2%;
+}
+
+.college-banner-contact {
+    display: flex;
+    justify-content: first baseline;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0)), url("photos/college_banner3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 8%;
+    padding-bottom: 2%;
+}
+
+.college-banner-services {
+    display: flex;
+    justify-content: first baseline;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0)), url("photos/college_banner4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 8%;
+    padding-bottom: 2%;
+}
+
+
+.homepage-content-index, .homepage-content-about {
+    padding: 8%;
+    padding-top: 3%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+}
+
+
+.homepage-content-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+}
+
+.homepage-content-coord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8%;
+    padding-top: 0%;
+    padding-left: 8%;
+    padding-bottom: 0%;
+}
+
+.homepage-content-txt-index, .homepage-content-txt-about {
+    color: white;
+    font-size: large;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.homepage-content-txt-contact {
+    margin-right: 10%;
+    color: white;
+    font-size: large;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.homepage-content-txt-coord {
+    margin: 3%;
+    margin-top: 6%;
+    background-color: rgba(50, 50, 50, 1);
+    padding: 2%;
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    float: left;
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.homepage-content-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+    padding-top: 10%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+    text-align: center; 
+}
+
+.homepage-content-txt-nav {
+    color: white;
+    font-size: 150%;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.75;
+    font-family: 'Inter', sans-serif;
+}
+
+.homepage-content-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8%;
+    padding-top: 0%;
+    padding-left: 8%;
+    padding-bottom: 0%;
+}
+
+.homepage-content-txt-services {
+    margin: 3%;
+    background-color: rgba(50, 50, 50, 1);
+    padding: 2%;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: large;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.sub-content-txt {
+    font-weight: 200;
+    color: rgb(192, 192, 192);
+    font-size: medium;
+}
+.sub-content-txt-1{
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.sub-content-txt-1-services{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: x-large;
+    border-radius: 10px;
+    font-weight: 500;
+    line-height: 1.25;
+    padding: 8%;
+    padding-top: 3%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+}
+
+.sub-content-txt-2{
+    color: rgb(187, 187, 187);
+    text-align: center;
+    font-size: x-large;
+    border-radius: 10px;
+    font-weight:lighter;
+    line-height: 1.25;
+    padding: 8%;
+    padding-top: 3%;
+    padding-left: 8%;
+    padding-bottom: 3%;
+}
+
+.homepage-content-2-index{
+    padding: 8%;
+    padding-top: 3%;
+    padding-left: 8%;
+}
+
+.homepage-content-2-txt-index{
+    color: white;
+    font-size: xx-large;
+    font-weight: 700;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-form{
+    background-color: rgba(50, 50, 50, 1);
+    text-align: center;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.contact-input{
+    margin-bottom: 5%;
+    width: 100%;
+    padding: 2%;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+}
+
+.contact-input-btn{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 2%;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    border: none;
+}
+
+.login-btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    padding: 1.5%;
+    margin-right: 3%;
+}
+
+.login-btn-txt {
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    text-decoration: none;
+    margin-right: 0px;
+}
+
+.btn-frame {
+    display: flex;
+}
+
+.text-inp{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: larger;
+    border: none;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.send-btn{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: 600;
+    border: none;
+    background-color: rgba(30, 30, 30, 1);
+    color: white;
+    text-decoration: none;
+}
+
+.student-list{
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    font-size: larger;
+    border: none;
+    list-style: none;
+    margin-top: 3%;
+}
+
+.student-list-item{
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 4%;
+}
+
+.navmenu{
+    background-color: rgba(50, 50, 50, 1);
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-right: 3%;
+    border: none;
+}
+
+.nav-img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer-index {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.footer-about, .footer-contact, .footer-coord, .footer-services {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.footer-nav{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+.footer-1 {
+    color: white;
+    margin-right: 30%;
+}
+
+.footer-content{
+    color: white;
+    margin-right: 2%;
+    padding: 0px;
+}

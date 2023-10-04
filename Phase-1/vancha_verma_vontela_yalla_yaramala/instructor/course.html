@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <title>Courses</title>
+  <link rel="stylesheet" href="course_styles.css">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <a href="home.html" class="logo">Instructor</a>
+      <div class="nav-items">
+        <a href="profile.html" class="login-btn-txt">Profile</a>
+      </div>
+      <div class="nav-items">
+        <a href="progress.html" class="login-btn-txt">Student</a>
+      </div>
+      <div class="nav-items">
+        <a href="grade.html" class="login-btn-txt">Grade</a>
+      </div>
+      <div class="nav-items">
+        <a href="assessments.html" class="login-btn-txt">Assessments</a>
+      </div>
+      <div class="nav-items">
+        <a href="course.html" class="login-btn-txt">Course</a>
+      </div>
+      <div class="nav-items">
+        <a href="chat.html" class="login-btn-txt">Chat</a>
+      </div>
+      <div class="nav-items">
+        <a href="../index.html" class="login-btn-txt-1">Sign Out</a>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="view-assessments">View My Courses</div>
+    <div class="table-scroll">
+      <input type="text" name="course-code" placeholder="Search course code (eg: CSE5301)">
+      <button type="submit" class="search-button">Search</button>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Code</th>
+          <th>Number of Students</th>
+          <th>Room Number</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>
+            <p>Information Security-1</p>
+          </td>
+          <td>
+            <p>CSE5338</p>
+          </td>
+          <td>
+            <p>107</p>
+          </td>
+          <td>
+            <p>NH100</p>
+          </td>
+          <td><a href="editCourse.html" class="edit">Edit</a><a href="" class="delete">Delete</a></td>
+        </tr>
+        <tr>
+          <td>
+            <p>Web Data Management</p>
+          </td>
+          <td>
+            <p>CSE5335</p>
+          </td>
+          <td>
+            <p>63</p>
+          </td>
+          <td>
+            <p>NH207</p>
+          </td>
+
+          <td><a href="editCourse.html" class="edit">Edit</a><a href="" class="delete">Delete</a></td>
+        </tr>
+      </table><br>
+    </div><br>
+    <a href="createCourse.html" class="create-course">Create Course</a>
+
+  </section>
+  <footer>
+    <div class="footer">
+      <div class="footer-1">
+        © Copyright 2023 Group 24. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

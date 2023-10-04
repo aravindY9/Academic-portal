@@ -1,0 +1,151 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.feedback-txt {
+    font-size: xx-large;
+    font-weight: 400;
+    margin: 2% 0;
+}
+.feedback-label{
+    color: #ffffff;
+    padding: 0 5%;
+}
+
+textarea {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    border-radius: 10px;
+    font-size: large;
+    border: none;
+    width: 90%;
+    margin-bottom: 1%;
+}
+
+.feedback-submit-btn {
+    background-color: rgb(0, 123, 80);
+    color: #ffffff;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    font-size: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar {
+    overflow: hidden;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    padding: 1.5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-items {
+    /* display: flex; */
+    align-items: center;
+
+    margin-right: 3%;
+
+}
+.logo {
+    float: left;
+    color: white;
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    margin-right: 2%;
+    margin-left: 0px;
+}
+
+.login-btn {
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-right: 3%;
+    padding: 0.5%;
+}
+
+.login-btn-txt {
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 120%;
+    text-decoration: none;
+    /* margin-right: 20px; */
+    border-radius: 5px;
+    color: #c4c4c4;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.login-btn-txt-1 {
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: large;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.student-login-txt {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 400%;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.select-course {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5%;
+    width: 15%;
+    border-radius: 10px;
+    font-size: 60%;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 1%;
+}
+.homepage-content {
+    margin-bottom: 10%;
+}
+
+.homepage-content-txt {
+    margin: 2%;
+    padding: 2%;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 15px;
+    float: left;
+    color: white;
+    font-size: xxx-large;
+    font-weight: 600;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}

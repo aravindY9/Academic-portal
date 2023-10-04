@@ -1,0 +1,188 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar {
+  overflow: hidden;
+  align-items: center;
+  background-color: rgba(50, 50, 50, 1);
+  margin-top: 0px;
+  padding: 1.5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-items {
+  /* display: flex; */
+  align-items: center;
+
+  margin-right: 3%;
+
+}
+
+.login-btn-txt {
+  color: rgb(0, 0, 0);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 120%;
+  text-decoration: none;
+  /* margin-right: 20px; */
+  border-radius: 5px;
+  color: #c4c4c4;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.login-btn-txt-1 {
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: large;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.logo {
+    float: left;
+    color: white;
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: none;
+    margin-right: 2%;
+    margin-left: 0px;
+}
+
+.student-login-txt {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 400%;
+    text-decoration: none;
+}
+
+
+.homepage-content {
+    /* display: flex; */
+    padding: 5%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+
+.homepage-content-txt {
+    float: left;
+    color: white;
+    font-size: xxx-large;
+    font-weight: 500;
+    line-height: 1.75;
+    text-decoration: none;
+}
+
+.sub-content-txt {
+    font-weight: 300;
+    color: rgb(192, 192, 192);
+    font-size: x-large;
+}
+
+.sub-content-txt-1 {
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.login-btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* width: 50%; */
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 8%;
+    margin-right: 3%;
+}
+
+.login-btn-txt-2 {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: x-large;
+    text-decoration: none;
+    margin-right: 0px;
+}
+
+.profile-img{
+    float: right;
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+.footer-1 {
+    color: white;
+}
+.feedback-label{
+    padding: 5%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+}
+
+.feedback-submit-btn {
+    background-color: rgb(0, 123, 80);
+    color: #ffffff;
+    padding: 1%;
+    border: none;
+    border-radius: 10px;
+    font-size: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+
+.feedback-txt {
+    margin-top: 17%;
+    font-size: xx-large;
+    font-weight: 400;
+    color: white;
+}
+
+.update-details-inp {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5%;
+    border-radius: 10px;
+    font-size: large;
+    border: none;
+    /* width: 90%; */
+    margin-bottom: 1%;
+}
+
+.edit-profile-photo{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: large;
+    color: white;
+}
