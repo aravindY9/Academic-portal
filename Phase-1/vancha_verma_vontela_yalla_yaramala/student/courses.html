@@ -1,145 +1,142 @@
 <html>
+  <head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="courses_styles.css" />
+  </head>
 
-<head>
-  <title>Courses</title>
-  <link rel="stylesheet" href="courses_styles.css">
-</head>
+  <body>
+    <nav>
+      <div class="navbar">
+        <a href="home.html" class="logo">Student</a>
+        <div class="nav-items">
+          <a href="profile.html" class="login-btn-txt">Profile</a>
+        </div>
+        <div class="nav-items">
+          <a href="exam_results.html" class="login-btn-txt">Exam Results</a>
+        </div>
+        <div class="nav-items">
+          <a href="courses.html" class="login-btn-txt">Courses</a>
+        </div>
+        <div class="nav-items">
+          <a href="give_feedback.html" class="login-btn-txt">Give Feedback</a>
+        </div>
+        <div class="nav-items">
+          <a href="chat.html" class="login-btn-txt">Chat</a>
+        </div>
+        <div class="nav-items">
+          <a href="../index.html" class="login-btn-txt-1">Sign Out</a>
+        </div>
+      </div>
+    </nav>
 
-<body>
-  <nav>
-    <div class="navbar">
-      <a href="home.html" class="logo">Student</a>
-      <div class="nav-items">
-        <a href="profile.html" class="login-btn-txt">Profile</a>
-      </div>
-      <div class="nav-items">
-        <a href="exam_results.html" class="login-btn-txt">Exam Results</a>
-      </div>
-      <div class="nav-items">
-        <a href="courses.html" class="login-btn-txt">Courses</a>
-      </div>
-      <div class="nav-items">
-        <a href="give_feedback.html" class="login-btn-txt">Give Feedback</a>
-      </div>
-      <div class="nav-items">
-        <a href="chat.html" class="login-btn-txt">Chat</a>
-    </div>
-      <div class="nav-items">
-        <a href="../index.html" class="login-btn-txt-1">Sign Out</a>
-      </div>
-    </div>
-  </nav>
-
-  <section>
-    <div class="view-assessments">Enrolled Courses</div>
-    <div class="table-scroll">
-      <!-- <input type="text" name="course-code" placeholder="Search course code (eg: CSE5301)">
+    <section>
+      <div class="view-assessments">Enrolled Courses</div>
+      <div class="table-scroll">
+        <!-- <input type="text" name="course-code" placeholder="Search course code (eg: CSE5301)">
       <button type="submit" class="search-button">Search</button> -->
-      <table>
-        <tr>
-          <th>Course</th>
-          <th>Code</th>
-        </tr>
-        <tr>
-          <td>
-            <p>Software Design Patterns</p>
-          </td>
-          <td>
-            <p>CSE5363</p>
-          </td>
-
-        </tr>
-        <tr>
-          <td>
-            <p>Cloud Computing</p>
-          </td>
-          <td>
-            <p>CSE5332</p>
-          </td>
-
-
-        </tr>
-        <tr>
-          <td>
-            <p>Machine Learning</p>
-          </td>
-          <td>
-            <p>CSE6363</p>
-          </td>
-
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Code</th>
           </tr>
-      </table>
-    </div>
-    <div class="view-assessments">View My Courses</div>
-    <div class="table-scroll">
-      <input type="text" name="course-code" placeholder="Search course code (eg: CSE5301)">
-      <button type="submit" class="search-button">Search</button>
-      <table>
-        <tr>
-          <th>Course</th>
-          <th>Code</th>
-          <th>Instructor</th>
-          <th>Action</th>
-
-        </tr>
-        <tr>
-          <td>
-            <p>Information Security-1</p>
-          </td>
-          <td>
-            <p>CSE5338</p>
-          </td>
-          <td>
-            <p>Jane Doe</p>
-          </td>
-          <td><a href="course_details.html" class="feedback-btn">View</a></td>
-        </tr>
-        <tr>
-          <td>
-            <p>Web Data Management</p>
-          </td>
-          <td>
-            <p>CSE5335</p>
-          </td>
-          <td>
-            <p>Adam John</p>
-          </td>
-          <td><a href="course_details.html" class="feedback-btn">View</a></td>
-        </tr>
-        <tr>
-          <td>
-            <p>Artificial Intelligence-1</p>
-          </td>
-          <td>
-            <p>CSE5301</p>
-          </td>
-          <td>
-            <p>James May</p>
-          </td>
-          <td><a href="course_details.html" class="feedback-btn">View</a></td>
+          <tr>
+            <td>
+              <p>Software Design Patterns</p>
+            </td>
+            <td>
+              <p>CSE5363</p>
+            </td>
           </tr>
-        <tr>
-          <td>
-            <p>Neural Networks</p>
-          </td>
-          <td>
-            <p>CSE5368</p>
-          </td>
-          <td>
-            <p>Ahmad Farood</p>
-          </td>
-          <td><a href="course_details.html" class="feedback-btn">View</a></td>
-        </tr>
-      </table>
-    </div>
-  </section>
-  <footer>
-    <div class="footer">
-      <div class="footer-1">
-        © Copyright 2023 Group 24. All rights reserved.
+          <tr>
+            <td>
+              <p>Cloud Computing</p>
+            </td>
+            <td>
+              <p>CSE5332</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Machine Learning</p>
+            </td>
+            <td>
+              <p>CSE6363</p>
+            </td>
+          </tr>
+        </table>
       </div>
-    </div>
-  </footer>
-</body>
-
+      <div class="view-assessments">View My Courses</div>
+      <div class="table-scroll">
+        <input
+          type="text"
+          name="course-code"
+          placeholder="Search course code (eg: CSE5301)"
+        />
+        <button type="submit" class="search-button">Search</button>
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>Code</th>
+            <th>Instructor</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>
+              <p>Information Security-1</p>
+            </td>
+            <td>
+              <p>CSE5338</p>
+            </td>
+            <td>
+              <p>Jane Doe</p>
+            </td>
+            <td><a href="course_details.html" class="feedback-btn">View</a></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Web Data Management</p>
+            </td>
+            <td>
+              <p>CSE5335</p>
+            </td>
+            <td>
+              <p>Adam John</p>
+            </td>
+            <td><a href="course_details.html" class="feedback-btn">View</a></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Artificial Intelligence-1</p>
+            </td>
+            <td>
+              <p>CSE5301</p>
+            </td>
+            <td>
+              <p>James May</p>
+            </td>
+            <td><a href="course_details.html" class="feedback-btn">View</a></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Neural Networks</p>
+            </td>
+            <td>
+              <p>CSE5368</p>
+            </td>
+            <td>
+              <p>Ahmad Farood</p>
+            </td>
+            <td><a href="course_details.html" class="feedback-btn">View</a></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="footer-1">
+          © Copyright 2023 Group 24. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

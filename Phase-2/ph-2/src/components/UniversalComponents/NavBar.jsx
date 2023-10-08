@@ -16,16 +16,31 @@ function student() {
           <a href="">Profile</a>
         </li>
         <li>
-          <a href="">Dashboard</a>
+          <a href="../Student/StudentHome.jsx">Dashboard</a>
         </li>
         <li>
-          <a href="">Courses</a>
+          <a href="StudentCourses.jsx">Courses</a>
         </li>
         <li>
           <a href="">Exams</a>
         </li>
+        <li>
+          <a href="">Feedback</a>
+        </li>
+        <li>
+          <a href="">Chat</a>
+        </li><br />
+        <li><a href="" className="signOut">Sign Out</a></li>
     </div>
   );
+}
+function whichNav(navto){
+if(navto === "indexNav"){
+  return student();
+}
+// else if(navto === "dashboard"){
+//   return dashboard();
+// }
 }
 function NavBar(props) {
   // const btn = document.getElementById("menuBtn");
@@ -34,14 +49,14 @@ function NavBar(props) {
   // });
     return (
     <div>
-      <div className="header" id="menuBtn" onClick={()=>{
+      <div className="header" id="menuBtn" >
+        <img src={ham} alt="" onClick={()=>{
           document.getElementsByClassName("navList")[0].style.transform = "translateX(0%)";
-          document.getElementsByClassName("navList")[0].style.transition = "all 0.4s";
-        }}>
-        <img src={ham} alt="" />
+          // document.getElementsByClassName("navList")[0].style.transition = "all 0.4s";
+        }}/>
         Mav Program
       </div>
-      <div>{props.x === "indexNav" ? student() : "asdkjf"}</div>
+      <div  className="nav">{whichNav(props.x)}</div>
     </div>
   );
 }
