@@ -2,7 +2,7 @@
 import './App.css';
 // import NavBar from './components/UniversalComponents/NavBar';
 // import Header from './components/UniversalComponents/Header';
-import StudentHome from './components/Student/StudentCourses';
+import StudentHome from './components/Student/StudentViewCourses';
 
 function App() {
   

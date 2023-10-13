@@ -16,14 +16,14 @@ function student() {
           <a href="">Profile</a>
         </li>
         <li>
-          <a href="../Student/StudentHome.jsx">Dashboard</a>
+          <a href="StudentHome.jsx">Dashboard</a>
         </li>
         <li>
           <a href="StudentCourses.jsx">Courses</a>
         </li>
-        <li>
+        {/* <li>
           <a href="">Exams</a>
-        </li>
+        </li> */}
         <li>
           <a href="">Feedback</a>
         </li>
