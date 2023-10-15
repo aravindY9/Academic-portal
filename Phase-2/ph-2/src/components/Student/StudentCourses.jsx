@@ -4,25 +4,25 @@ import "./StudentCourses.css";
 
 function App() {
   return (
-    <div className="mainBody">
+    <div className="stco-mainBody">
       <div className="pageFormat">
         <NavBar x="indexNav" />
       </div>
       <br />
       <br />
       <div className="studentBody">
-        <div className="studentLabel">Search Courses:</div>
+        <div className="stco-studentLabel">Search Courses:</div>
         <input
           type="text"
           name="course-code"
           placeholder="Search course code (eg: CSE5301)"
+          className="stco-searchCourse"
         />
-        <button type="submit" class="search-button">
+        <button type="submit" class="stco-search-button">
           Search
         </button>
-        <div className="tableScroll">
+        <div className="stco-tableScroll">
           <table>
-
             <tr>
               <th>Course</th>
               <th>Code</th>
@@ -157,7 +157,6 @@ function App() {
                 </a>
               </td>
             </tr>
-            
           </table>
         </div>
       </div>

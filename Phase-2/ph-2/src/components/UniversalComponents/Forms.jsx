@@ -5,9 +5,9 @@ function studentFeedback() {
   return (
       <form action="">
         Feedback <br /> 
-        <input type="number" placeholder="Enter StudentID" />
+        <input type="number" placeholder="Enter StudentID" className="formInput"/>
         <br />
-        <textarea name="" id="" cols="30" rows="10" placeholder="Enter Feedback"></textarea>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Enter Feedback" className="formTextArea"></textarea>
         <br />
         <button className="submit">Submit</button>
       </form>

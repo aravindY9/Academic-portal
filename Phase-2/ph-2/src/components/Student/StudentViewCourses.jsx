@@ -25,9 +25,6 @@ function App() {
           <br />
           <a href="" className="syllabus">
             Download Syllabus
-          </a>{" "}
-          <a href="" className="enroll">
-            Enroll
           </a>
           <br />
           <br />

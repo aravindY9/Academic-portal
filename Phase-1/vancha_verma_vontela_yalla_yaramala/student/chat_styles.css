@@ -205,7 +205,6 @@ body {
   .chat-section{
     display: flex;
   }
-
   .chat-to{
     position: relative;;
     left: 45%;
@@ -227,3 +226,4 @@ body {
     border-radius: 10px;
     width: 50%;
   }
+

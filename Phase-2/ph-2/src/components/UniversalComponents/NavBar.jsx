@@ -2,6 +2,7 @@ import React from "react";
 import "../../navBar.css";
 import ham from "../../photos/Hamburger_icon.png";
 import cross from "../../photos/Cross_icon.png";
+import { Link } from "react-router-dom";
 
 function student() {
   return (
@@ -13,14 +14,16 @@ function student() {
         }><img src={cross} alt=""/></li>
         <li>Student</li>
         <li>
-          <a href="">Profile</a>
+          {/* <Link></Link> */}
+          <a href="http://localhost:3000/Student/StudentAssignment.jsx">Profile</a>
+          {/* <Link to="/Student/StudentHome">Dashboard</Link> */}
         </li>
         <li>
           <a href="StudentHome.jsx">Dashboard</a>
         </li>
-        <li>
+        {/* <li>
           <a href="StudentCourses.jsx">Courses</a>
-        </li>
+        </li> */}
         {/* <li>
           <a href="">Exams</a>
         </li> */}

@@ -5,7 +5,7 @@ import "./StudentFeedback.css";
 
 function App() {
   return (
-    <div className="mainBody">
+    <div className="sfe-mainBody">
       <div className="pageFormat">
         <NavBar x="indexNav" />
       </div>

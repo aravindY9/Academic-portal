@@ -1,5 +1,6 @@
 import NavBar from "../UniversalComponents/NavBar";
 import "./StudentHome.css";
+
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
           <tr>
             <th>Course</th>
             <th>Course Code</th>
-            <th>Assignments</th>
             <th>Grades</th>
           </tr>
           <tr>
@@ -30,10 +30,7 @@ function App() {
               <p>CSE5363</p>
             </td>
             <td>
-              <a href="">view</a>
-            </td>
-            <td>
-              <a href="">view</a>
+              B
             </td>
           </tr>
           <tr>
@@ -43,11 +40,9 @@ function App() {
             <td>
               <p>CSE5332</p>
             </td>
+    
             <td>
-              <a href="">view</a>
-            </td>
-            <td>
-              <a href="">view</a>
+              A
             </td>
           </tr>
           <tr>
@@ -57,11 +52,9 @@ function App() {
             <td>
               <p>CSE6363</p>
             </td>
+        
             <td>
-              <a href="">view</a>
-            </td>
-            <td>
-              <a href="">view</a>
+              A
             </td>
           </tr>
         </table>
