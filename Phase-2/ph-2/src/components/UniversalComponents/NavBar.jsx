@@ -63,11 +63,43 @@ function AdminNav() {
   );
 }
 
+function instructor() {
+  return (
+    <div className="navList">
+       <li onClick={
+          () => {
+            document.getElementsByClassName("navList")[0].style.transform = "translateX(-120%)";
+          }
+        }><img src={cross} alt=""/></li>
+      <li><Link to="/Instructor/">Instructor</Link></li>
+      <li>
+        <Link to="/Instructor/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/Instructor/gradeStudent">Grade</Link>
+      </li>
+      <li>
+        <Link to="/Instructor/createAssignment">Assessments</Link>
+      </li>
+      <li>
+        <Link to="/Instructor/Courses">Course</Link>
+      </li>
+      <li>
+        <Link to="/Instructor/chat">Chat</Link>
+      </li>
+      <br />
+      <li><a href="" className="signOut">Sign Out</a></li>
+    </div>
+  );
+}
+
 function whichNav(navto){
 if(navto === "indexNav"){
   return student();
 }else if (navto === "admin") {
   return <AdminNav />;
+}else if (navto === "instructorNav"){
+  return instructor();
 }
 // else if(navto === "dashboard"){
 //   return dashboard();

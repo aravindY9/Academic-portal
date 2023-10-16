@@ -15,6 +15,18 @@ import StudentCourse from './components/Student/StudentCourses';
 import StudentExams from './components/Student/StudentExams';
 import StudentChat from './components/Student/StudentChat';
 import StudentProfile from './components/Student/StudentProfile';
+
+import InstructorChat from './components/Instructor/InstructorChat';
+import InstructorCourse from './components/Instructor/InstructorCourse';
+import InstructorCreateAssignment from './components/Instructor/InstructorCreateAssignment';
+import InstructorCreateCourse from './components/Instructor/InstructorCreateCourse';
+import InstructorCreateExam from './components/Instructor/InstructorCreateExam';
+import InstructorEditAssignment from './components/Instructor/InstructorEditAssignment';
+import InstructorEditExam from './components/Instructor/InstructorEditExam';
+import InstructorGradeStudent from './components/Instructor/InstructorGradeStudent';
+import InstructorHome from './components/Instructor/InstructorHome';
+import InstructorProfile from './components/Instructor/InstructorProfile';
+import InstructorStudents from './components/Instructor/InstructorStudents';
 // import StudentChat from './components/Student/StudentChat';
 // import
 
@@ -39,6 +51,19 @@ function App() {
         <Route path="/Student/StudentFeedback" element={<StudentFeedback/>} />
         <Route path="/Student/StudentChat" element={<StudentChat/>} />
         <Route path="/Student/StudentProfile" element={<StudentProfile/>} />
+
+        {/* Instructor Routes */}
+        <Route path="/Instructor/" element={<InstructorHome/>} />
+        <Route path="/Instructor/Courses" element={<InstructorCourse/>} />
+        <Route path="/instructor/CreateExams" element={<InstructorCreateExam/>} />
+        <Route path="/Instructor/editExam" element={<InstructorEditExam/>} />
+        <Route path="/Instructor/createAssignment" element={<InstructorCreateAssignment/>} />
+        <Route path="/Instructor/editAssignment" element={<InstructorEditAssignment/>} />
+        <Route path="/Instructor/gradeStudent" element={<InstructorGradeStudent/>} />
+        <Route path="/Instructor/chat" element={<InstructorChat/>} />
+        <Route path="/Instructor/createCourse" element={<InstructorCreateCourse/>} />
+        <Route path="/Instructor/profile" element={<InstructorProfile/>} />
+        <Route path="/Instructor/Student" element={<InstructorStudents/>} />
       </Routes>
     </BrowserRouter>
   );
