@@ -121,7 +121,7 @@
     font-size: x-large;
   }
   
-  input[type="text"]{
+  .subContextTxt input{
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
     padding: 15px;
@@ -220,7 +220,9 @@
     background-color: rgb(140, 153, 165); */
 }
 
-.driveSubmitInput{
-  margin-top: 0;
-  width: 100%;
+.sa-driveSubmitInput{
+  margin: 0;
+  margin-bottom: 1%;
+  width: 50%;
+  font-size: 60%;
 }

@@ -27,59 +27,59 @@ function App() {
           <div className="grades">
             Total Grade: <b>A</b>
           </div>
-          <table>
+          <table className="ih-table">
             <tr>
-              <th>Exam Name</th>
-              <th>Grade</th>
-              <th>Action</th>
+              <th className="ih-th">Exam Name</th>
+              <th className="ih-th">Grade</th>
+              <th className="ih-th">Action</th>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Quiz-1</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>80/100</p>
               </td>
-              <td><a href="" className="ic-deleteButton"><Link to="/Instructor/editExam">Update Grades</Link></a></td>
+              <td className="ih-td"><a href="" className="ic-deleteButton">Update Grades</a></td>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Assignment-1</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>85/100</p>
               </td>
-              <td><a href="" className="ic-deleteButton"><Link to="/Instructor/editExam">Update Grades</Link></a></td>
+              <td className="ih-td"><a href="" className="ic-deleteButton">Update Grades</a></td>
 
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Quiz-2</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>85/100</p>
               </td>
-              <td><a href="" className="ic-deleteButton"><Link to="/Instructor/editExam">Update Grades</Link></a></td>
+              <td className="ih-td"><a href="" className="ic-deleteButton">Update Grades</a></td>
 
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Assignment-2</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>-/100</p>
               </td>
-              <td><a href="" ><Link to="/Instructor/editExam">Add Grades</Link></a></td>
+              <td className="ih-td"><a href="" >Add Grades</a></td>
 
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Project</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>-/100</p>
               </td>
-              <td><a href="" ><Link to="/Instructor/editExam">Add Grades</Link></a></td>
+              <td className="ih-td"><a href="" >Add Grades</a></td>
 
             </tr>
           </table>

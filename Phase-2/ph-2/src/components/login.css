@@ -1,0 +1,247 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+
+.logo {
+    float: left;
+    color: white;
+    font-weight: 500;
+    font-size: xx-large;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    margin-right: 2%;
+    margin-left: 0px;
+}
+.navbar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    padding: 1.5%;
+    width: 100%;
+    
+}
+.student-login-txt{
+    display: flex;
+    font-weight: bolder;
+    font-size:xx-large;
+    
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+
+}
+.college-banner {
+    display: flex;
+    justify-content: first baseline;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.836), rgba(255, 255, 255, 0)), url(photos/college_banner1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding: 8%;
+    padding-bottom: 2%;
+}
+
+.login-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgba(50, 50, 50, 1);
+    border-radius: 10px;
+    /* padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    width: 40%;
+}
+
+input[type="text"],
+input[type="password"] {
+    
+    width: 85%;
+    padding: 2% 3%;
+    /* text-align: left; */
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.select-user{
+    font-size: xxx-large;
+    color: white;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.select-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgba(50, 50, 50, 1);
+    border-radius: 10px;
+    /* padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 40%;
+}
+
+.select-container button{
+    width: 80%;  
+    background-color: white;  
+}
+
+.select-container a{
+    color: black;
+    background-color: white;
+    font-size: x-large;
+}
+
+.form-group {
+    font-size: large;
+    /* display: flex;
+
+    justify-content: center;
+    align-items: center; */
+    padding: 10%;
+    /* margin: 5% 0; */
+    /* text-align: left; */
+}
+
+
+/*signup page*/
+.signup-container{
+    background-color: rgba(50, 50, 50, 1);
+    border-radius: 10px;
+    /* display: block; */
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: rgba(50, 50, 50, 1);
+    /* padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%; */
+    padding: 5%;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+.signup-form-group {
+    /* font-size: large; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 5% 0; */
+    text-align: left;
+}
+.signup-form-group input{
+    width: 92%;
+    margin: 1%;
+    /* font-size: .5rem; */
+}
+.name-group{
+    display: flex;
+}
+
+.name-form-group{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 4%;
+    align-items: center;
+}
+
+.name-form-group button{
+    font-size: x-large;
+}
+
+.name-form-group a{
+    font-size: large;
+}
+
+a{
+    text-decoration: none;
+    color:#ccc;
+}
+.fgp{
+    text-decoration: underline;
+}
+button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: larger;
+    background-color: #070707;
+    color:#ccc;
+    padding: 3% 5%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+
+label {
+    color:#070707;
+    font-weight: bold;
+    display: block;
+    
+}
+p{
+    color: #ccc;
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(50, 50, 50, 1);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
+.footer-1 {
+    color: white;
+    margin-right: 30%;
+}
+
+.footer-content{
+    color: white;
+    margin-right: 2%;
+    padding: 0px;
+}
+.td-middle{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10%;
+}
+input::placeholder{
+    font-size: x-large;
+}
+table{
+    width: 100%;
+}

@@ -4,7 +4,7 @@ import NavBar from "../UniversalComponents/NavBar";
 import progress from '../../photos/graph.png';
 
 function HomePage(){
-    return (<div><NavBar x="admin" /><section><div className="welcome-msg"><b>Welcome, Admin! </b><br />
+    return (<div><NavBar x="admin" /><section><div className="welcome-msg"><br /><b>Welcome, Admin! </b><br />
 
     You're in charge now. Manage with ease and feel free to ask for assistance if needed. Your efforts keep everything in check. </div>
   <br />

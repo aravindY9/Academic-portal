@@ -1,71 +1,158 @@
-import React from "react";
-import "./ChatPage.css";
 import NavBar from "../UniversalComponents/NavBar";
-function ChatPage(){
-    return (
-      <div>
-       <NavBar x="admin" />
-        <div>
-       
-    <div className="warning-msg"><b>Chat Responsibly:</b> Words have consequences. Be mindful of your words and actions in
-      this chat. Keep it respectful and considerate.
-    </div><br />
-    <div className="chat-section">
-      <table className="chat-table">
-        <tr>
-          <th className="table-head">ID</th>
-          <th className="table-head">Action</th>
-        </tr>
-        <tr>
-          <td className="table-row-1">1003987654</td>
-          <td className="table-row-1"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-        <tr>
-          <td className="table-row-2">1006214875</td>
-          <td className="table-row-2"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-        <tr>
-          <td className="table-row-1">1005392168</td>
-          <td className="table-row-1"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-        <tr>
-          <td className="table-row-2">1008745923</td>
-          <td className="table-row-2"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-        <tr>
-          <td className="table-row-1">1005392168</td>
-          <td className="table-row-1"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-        <tr>
-          <td className="table-row-2">1008745923</td>
-          <td className="table-row-2"><a href="studentProgressDetails.html" className="edit">chat</a></td>
-        </tr>
-      </table><br />
-      <div className="chat">
-        <div className="chat-to">
-          <p><b><u>Admin</u></b></p>
-          <p>Hi, how can I help you?</p>
-        </div><br />
-        <div className="chat-from">
-          <p><b><u>1005392168</u></b></p>
-          <p>Hi, I have a doubt</p>
-        </div><br />
-        <div className="chat-to">
-          <p><b><u>Admin</u></b></p>
-          <p>please, go ahead</p>
-        </div><br />
-        <div className="chat-from">
-          <p><b><u>1005392168</u></b></p>
-          <p>what are your QA policies?</p>
+import "./ChatPage.css";
+
+// import Header from './components/UniversalComponents/Header';
+
+function App() {
+  return (
+    <div className="sch-mainBody">
+      <div className="pageFormat">
+        <NavBar x="admin" />
+      </div>
+      <br />
+      <br />
+      <div className="chatBody">
+        <div className="welcomeMsg">
+          <b>Chat Responsibly:</b> Words have consequences. Be mindful of your
+          words and actions in this chat. Keep it respectful and considerate.
         </div>
-        <input type="text" className="chat-input" placeholder="Enter text here" />
-        <button type="submit" className="send-button">Send</button>
+        <div className="subChatBody">
+          {/* <input
+              type="text"
+              class="chat-input"
+              placeholder="Enter text here"
+            /> 
+            <button type="submit" class="send-button">
+              Send
+            </button> */}
+     
+
+          <div class="chat">
+            <div class="chat-to">
+              <p>
+                <b>
+                  <u>You</u>
+                </b>
+              </p>
+              <p>How are you?</p>
+            </div>
+            <br />
+            <div class="chat-from">
+              <p>
+                <b>
+                  <u>Jane Doe</u>
+                </b>
+              </p>
+              <p>I am fine, how are you?</p>
+            </div>
+            <br />
+            <div class="chat-to">
+              <p>
+                <b>
+                  <u>You</u>
+                </b>
+              </p>
+              <p>Doing good, thanks</p>
+            </div>
+            <br />
+            <div class="chat-from">
+              <p>
+                <b>
+                  <u>Jane Doe</u>
+                </b>
+              </p>
+              <p>So, how can I help you?</p>
+            </div>
+            <input
+              type="text"
+              class="chat-input"
+              placeholder="Enter text here"
+            />
+            <button type="submit" class="send-button">
+              Send
+            </button>
+          </div>
+          <div>
+            <div className="tableScroll">
+              <table>
+                {/* <div className="studentLabel">Users:</div> */}
+
+                <tr>
+                  <th>Recents</th>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">jsm8323@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">axv9331@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">dsy4321@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">hgf3456@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">jsm8323@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">axv9331@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">dsy4321@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">hgf3456@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">jsm8323@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">axv9331@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">dsy4321@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">hgf3456@mavs.uta.edu</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="">hgf3456@mavs.uta.edu</a>
+                  </td>
+                </tr>
+              </table>
+              <br />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  </div>
-    )
+  );
 }
 
-
-export default ChatPage;
+export default App;

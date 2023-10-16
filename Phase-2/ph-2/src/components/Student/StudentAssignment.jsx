@@ -20,11 +20,11 @@ function App() {
           <b>Maximum Score: </b> 100
           <br />
           <br />
-          <a href="" className="syllabus">
+          {/* <a href="" className="syllabus">
             Download Assignment Description
-          </a>
-          <br />
-          <br />
+          </a> */}
+          {/* <br />
+          <br /> */}
           Description:
           <br />
           <div className="CourseObjContent">
@@ -88,7 +88,7 @@ function App() {
           </div>
           <br />
           Submit: <br />
-          <input type="text" placeholder="Enter Drive Link" className="driveSubmitInput"/><br />
+          <input type="text" placeholder="Enter Drive Link" className="sa-driveSubmitInput"/><br />
           <button className="submit">Submit</button><br /><br />
           
         </div>

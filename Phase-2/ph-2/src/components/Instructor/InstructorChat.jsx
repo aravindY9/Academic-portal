@@ -74,7 +74,7 @@ function App() {
           </div>
           <div>
             <div className="tableScroll">
-              <table>
+              <table className="ih-table">
                 {/* <div className="studentLabel">Users:</div> */}
 
                 <tr>

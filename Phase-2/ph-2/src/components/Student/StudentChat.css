@@ -97,7 +97,7 @@ table {
 
   .chat{
     background-color: rgba(50, 50, 50, 1);
-    height: 60vh;
+    /* height: 60vh; */
     width: 100%;
     /* margin-left: 5%; */
     margin-right: 2%;
@@ -146,6 +146,6 @@ table {
   }
 
   .tableScroll{
-    height: 67vh;
-    border: solid 1px rgba(50, 50, 50, 1);
+    /* height: 67vh; */
+    /* border:  solid 1px rgba(50, 50, 50, 1); */
   }

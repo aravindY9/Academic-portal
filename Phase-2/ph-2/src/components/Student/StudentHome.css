@@ -5,12 +5,12 @@
 .welcomeMsg{
     text-align: center;
     color: white;
-    font-size: x-large;
+    font-size: large;
     margin-bottom: 3%;
 }
 
 .student-home-table {
-    
+    margin: 0;
     width: 100%;
     border-collapse: collapse;
     background-color: rgba(30, 30, 30, 1);
@@ -22,7 +22,7 @@
      padding: 10px;
     text-align: center;
     border: 1px solid #4b4b4b;
-    font-size: 120%;
+    font-size: 60%;
     /* padding: 1.5%; */
   }
 

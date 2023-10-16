@@ -1,5 +1,6 @@
 import NavBar from "../UniversalComponents/NavBar";
 import "./StudentHome.css";
+import { Link } from "react-router-dom";
 
 // import Header from './components/UniversalComponents/Header';
 
@@ -24,38 +25,32 @@ function App() {
           </tr>
           <tr>
             <td className="student-home-th-td">
-              <a href="">Software Design Patterns</a>
+              <Link to="/student/StudentExams">Software Design Patterns</Link>
             </td>
             <td className="student-home-th-td">
               <p>CSE5363</p>
             </td>
-            <td className="student-home-th-td">
-              B
-            </td>
+            <td className="student-home-th-td">B</td>
           </tr>
           <tr>
             <td className="student-home-th-td">
-              <a href="">Cloud Computing</a>
+              <Link to="/student/StudentExams">Cloud Computing</Link>
             </td>
             <td className="student-home-th-td">
               <p>CSE5332</p>
             </td>
-    
-            <td className="student-home-th-td">
-              A
-            </td>
+
+            <td className="student-home-th-td">A</td>
           </tr>
           <tr>
             <td className="student-home-th-td">
-              <a href="">Machine Learning</a>
+              <Link to="/student/StudentExams">Machine Learning</Link>
             </td>
             <td className="student-home-th-td">
               <p>CSE6363</p>
             </td>
-        
-            <td className="student-home-th-td">
-              A
-            </td>
+
+            <td className="student-home-th-td">A</td>
           </tr>
         </table>
         <div class="course-obj">

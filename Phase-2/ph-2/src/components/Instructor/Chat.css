@@ -75,7 +75,7 @@ table {
   }
 
   .chat-to{
-    position: relative;
+    /* position: relative; */
     left: 45%;
     background-color: rgb(167, 255, 195);
     color: black;
@@ -97,7 +97,7 @@ table {
 
   .chat{
     background-color: rgba(50, 50, 50, 1);
-    height: 60vh;
+    /* height: 60vh; */
     width: 100%;
     /* margin-left: 5%; */
     margin-right: 2%;
@@ -112,7 +112,7 @@ table {
     border-radius: 5px 0px 0px 5px;
     font-size: larger;
     border: none;
-    width: 86%;
+    width: 85%;
     /* margin-bottom: 2%; */
     margin-right: 0px;
     margin-top: 5%;
@@ -146,6 +146,6 @@ table {
   }
 
   .tableScroll{
-    height: 67vh;
-    border: solid 1px rgba(50, 50, 50, 1);
+    /* height: 67vh;
+    border: solid 1px rgba(50, 50, 50, 1); */
   }

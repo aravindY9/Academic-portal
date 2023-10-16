@@ -15,6 +15,7 @@ import StudentCourse from './components/Student/StudentCourses';
 import StudentExams from './components/Student/StudentExams';
 import StudentChat from './components/Student/StudentChat';
 import StudentProfile from './components/Student/StudentProfile';
+import StudentAssignment from './components/Student/StudentAssignment';
 
 import InstructorChat from './components/Instructor/InstructorChat';
 import InstructorCourse from './components/Instructor/InstructorCourse';
@@ -51,6 +52,7 @@ function App() {
         <Route path="/Student/StudentFeedback" element={<StudentFeedback/>} />
         <Route path="/Student/StudentChat" element={<StudentChat/>} />
         <Route path="/Student/StudentProfile" element={<StudentProfile/>} />
+        <Route path="/Student/StudentAssignment" element={<StudentAssignment/>} />
 
         {/* Instructor Routes */}
         <Route path="/Instructor/" element={<InstructorHome/>} />

@@ -26,7 +26,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-              <a href="">Software Design Patterns</a>
+            <Link to="/Instructor/Courses">Software Design Patterns</Link>
             </td>
             <td className="ih-td">
               <p>CSE5363</p>
@@ -34,7 +34,7 @@ function App() {
             <td className="ih-td">62</td>
             <td className="ih-td">NH100</td>
             <td className="ih-td">92.22%</td>
-            <td>
+            <td className="ih-td">
               {" "}
               <a href="" className="ic-deleteButton">
                 Delete
@@ -43,7 +43,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-              <a href="">Cloud Computing</a>
+            <Link to="/Instructor/Courses">Cloud Computing</Link>
             </td>
             <td className="ih-td">
               <p>CSE5332</p>
@@ -51,7 +51,7 @@ function App() {
             <td className="ih-td">50</td>
             <td className="ih-td">ERB107</td>
             <td className="ih-td">87.23%</td>
-            <td>
+            <td className="ih-td">
               {" "}
               <a href="" className="ic-deleteButton">
                 Delete
@@ -60,7 +60,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-              <a href="">Machine Learning</a>
+            <Link to="/Instructor/Courses">Machine Learning</Link>
             </td>
             <td className="ih-td">
               <p>CSE6363</p>
@@ -68,7 +68,7 @@ function App() {
             <td className="ih-td">76</td>
             <td className="ih-td">SC203</td>
             <td className="ih-td">90.29%</td>
-            <td>
+            <td className="ih-td">
               {" "}
               <a href="" className="ic-deleteButton">
                 Delete
@@ -77,9 +77,7 @@ function App() {
           </tr>
         </table>
         <div className="tempMargin"></div>
-        <a href="" className="ic-createAssign">
-          <Link to="/Instructor/createAssignment"> Create New Course </Link>
-        </a>
+          <Link to="/Instructor/createCourse" className="ic-createAssign"> Create New Course </Link>
         <br />
         <br />
         <div className="studentLabel">Send Announcement:</div>

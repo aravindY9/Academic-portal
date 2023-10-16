@@ -24,7 +24,7 @@ function App() {
           <input
             type="text"
             placeholder="Enter Phone Number"
-            className="updateInput"
+            className="sp-updateInput"
           /> <br />
           <textarea
             name=""
@@ -32,7 +32,7 @@ function App() {
             placeholder="Enter Address"
             cols="30"
             rows="10"
-            className="updateTextArea"
+            className="sp-updateTextArea"
           ></textarea>
           <br />
           <button className="submitButton"> Save</button>

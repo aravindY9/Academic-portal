@@ -29,28 +29,28 @@ function App() {
           <br />
           <br />
           Assignments:
-          <table>
+          <table className="ih-table">
             <tr>
-              <th>Assessment Name</th>
-              <th>Description</th>
-              <th>Due Date</th>
-              <th>Score</th>
-              <th>Actions</th>
+              <th className="ih-th">Assessment Name</th>
+              <th className="ih-th">Description</th>
+              <th className="ih-th">Due Date</th>
+              <th className="ih-th">Score</th>
+              <th className="ih-th">Actions</th>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Assignment 1</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>Sorting</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>09/30/2023</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>100</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
@@ -58,19 +58,19 @@ function App() {
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Assignment 2</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>Data Cleaning</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>10/5/2023</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>100</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
@@ -79,69 +79,67 @@ function App() {
             </tr>
           </table>
           <div className="tempMargin"></div>
-          <a href="" className="ic-createAssign">
-            Create New Assignment
-          </a>
+          <Link to ="/Instructor/CreateAssignment" className="ic-createAssign">Create New Assignment</Link> 
           <br />
           <br />
           <div className="grades">Exams:</div>
-          <table>
+          <table className="ih-table">
             <tr>
-              <th>Exam Name</th>
-              <th>Max Score</th>
-              <th>Action</th>
+              <th className="ih-th">Exam Name</th>
+              <th className="ih-th">Max Score</th>
+              <th className="ih-th">Action</th>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Quiz-1</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>50</p>
               </td>
-              <td>
-                <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
+              <td className="ih-td">
+                <a href=""><Link to ="/Instructor/editExam">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Mid Term</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>100</p>
               </td>
-              <td>
-                <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
+              <td className="ih-td">
+                <a href=""><Link to ="/Instructor/editExam">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Quiz-2</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>50</p>
               </td>
-              <td>
-                <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
+              <td className="ih-td">
+                <a href=""><Link to ="/Instructor/editExam">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="ih-td">
                 <p>Final Exam</p>
               </td>
-              <td>
+              <td className="ih-td">
                 <p>100</p>
               </td>
-              <td>
-                <a href=""><Link to ="/Instructor/editAssignment">Edit</Link></a> |{" "}
+              <td className="ih-td">
+                <a href=""><Link to ="/Instructor/editExam">Edit</Link></a> |{" "}
                 <a href="" className="ic-deleteButton">
                   Delete
                 </a>
@@ -149,9 +147,7 @@ function App() {
             </tr>
           </table>
           <div className="tempMargin"></div>
-          <a href="" className="ic-createAssign">
-            Create New Exam
-          </a>
+          <Link to ="/Instructor/CreateExams" className="ic-createAssign">Create New Exam</Link>
         </div>
       </div>
     </div>

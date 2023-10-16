@@ -11,7 +11,7 @@ function ProfilePage(){
         <div>
         <NavBar x="admin" />
         <Details name="Bruce Wayne" email="Batman@gotham.com" id="001"/>
-        <Avater img={profilepic} />
+        {/* <Avater img={profilepic} /> */} <br />
         <Entries />
         </div>
     )
