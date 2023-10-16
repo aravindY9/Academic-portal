@@ -22,136 +22,136 @@ function App() {
           Search
         </button>
         <div className="stco-tableScroll">
-          <table>
+          <table className="student-table-course">
             <tr>
-              <th>Course</th>
-              <th>Code</th>
-              <th>Instructor</th>
-              <th>Details</th>
+              <th className="student-course-td-th">Course</th>
+              <th className="student-course-td-th">Code</th>
+              <th className="student-course-td-th">Instructor</th>
+              <th className="student-course-td-th">Details</th>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Information Security-1</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5338</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Jane Doe</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Web Data Management</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5335</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Adam John</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Artificial Intelligence-1</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5301</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>James May</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Neural Networks</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5368</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Ahmad Farood</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Information Security-1</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5338</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Jane Doe</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Web Data Management</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5335</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Adam John</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Artificial Intelligence-1</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5301</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>James May</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>
               </td>
             </tr>
             <tr>
-              <td>
+              <td className="student-course-td-th">
                 <p>Neural Networks</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>CSE5368</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <p>Ahmad Farood</p>
               </td>
-              <td>
+              <td className="student-course-td-th">
                 <a href="course_details.html" class="feedback-btn">
                   View
                 </a>

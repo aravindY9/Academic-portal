@@ -14,32 +14,60 @@ function student() {
         }><img src={cross} alt=""/></li>
         <li>Student</li>
         <li>
-          {/* <Link></Link> */}
-          <a href="http://localhost:3000/Student/StudentAssignment.jsx">Profile</a>
-          {/* <Link to="/Student/StudentHome">Dashboard</Link> */}
+          <Link to="/Student/StudentProfile">Profile</Link>
         </li>
         <li>
-          <a href="StudentHome.jsx">Dashboard</a>
-        </li>
-        {/* <li>
-          <a href="StudentCourses.jsx">Courses</a>
-        </li> */}
-        {/* <li>
-          <a href="">Exams</a>
-        </li> */}
-        <li>
-          <a href="">Feedback</a>
+        <Link to="/student">Dashboard</Link>
         </li>
         <li>
-          <a href="">Chat</a>
+        <Link to="/Student/StudentCourses">Courses</Link>
+        </li> 
+        <li>
+        <Link to="/Student/StudentExams">Exams</Link>
+        </li> 
+        <li>
+          <Link to="/Student/StudentFeedback">Feedback</Link> 
+        </li>
+        <li>
+        <Link to="/Student/StudentChat">Chat</Link>
         </li><br />
         <li><a href="" className="signOut">Sign Out</a></li>
     </div>
   );
 }
+
+function AdminNav() {
+  return (
+    <div className="navList">
+       <li onClick={
+          () => {
+            document.getElementsByClassName("navList")[0].style.transform = "translateX(-120%)";
+          }
+        }><img src={cross} alt=""/></li>
+      <li><Link to="/admin/">Admin</Link></li>
+      <li>
+        <Link to="/admin/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/admin/accounts">Accounts</Link>
+      </li>
+      <li>
+        <Link to="/admin/course">Course</Link>
+      </li>
+      <li>
+        <Link to="/admin/chat">Chat</Link>
+      </li>
+      <br />
+      <li><a href="" className="signOut">Sign Out</a></li>
+    </div>
+  );
+}
+
 function whichNav(navto){
 if(navto === "indexNav"){
   return student();
+}else if (navto === "admin") {
+  return <AdminNav />;
 }
 // else if(navto === "dashboard"){
 //   return dashboard();

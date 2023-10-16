@@ -9,7 +9,7 @@
     margin-bottom: 3%;
 }
 
-table {
+.student-home-table {
     
     width: 100%;
     border-collapse: collapse;
@@ -18,9 +18,8 @@ table {
     overflow-y: auto;
   }
 
-  th,
-  td {
-    padding: 10px;
+  .student-home-th-td{
+     padding: 10px;
     text-align: center;
     border: 1px solid #4b4b4b;
     font-size: 120%;

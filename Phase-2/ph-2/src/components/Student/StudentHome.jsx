@@ -16,44 +16,44 @@ function App() {
           Welcome to the <b>Student Hub</b>
         </div>
         <div className="studentLabel">My Courses:</div>
-        <table>
+        <table className="student-home-table">
           <tr>
-            <th>Course</th>
-            <th>Course Code</th>
-            <th>Grades</th>
+            <th className="student-home-th-td">Course</th>
+            <th className="student-home-th-td">Course Code</th>
+            <th className="student-home-th-td">Grades</th>
           </tr>
           <tr>
-            <td>
+            <td className="student-home-th-td">
               <a href="">Software Design Patterns</a>
             </td>
-            <td>
+            <td className="student-home-th-td">
               <p>CSE5363</p>
             </td>
-            <td>
+            <td className="student-home-th-td">
               B
             </td>
           </tr>
           <tr>
-            <td>
+            <td className="student-home-th-td">
               <a href="">Cloud Computing</a>
             </td>
-            <td>
+            <td className="student-home-th-td">
               <p>CSE5332</p>
             </td>
     
-            <td>
+            <td className="student-home-th-td">
               A
             </td>
           </tr>
           <tr>
-            <td>
+            <td className="student-home-th-td">
               <a href="">Machine Learning</a>
             </td>
-            <td>
+            <td className="student-home-th-td">
               <p>CSE6363</p>
             </td>
         
-            <td>
+            <td className="student-home-th-td">
               A
             </td>
           </tr>
