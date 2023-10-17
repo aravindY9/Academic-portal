@@ -1,5 +1,7 @@
 // import NavBar from "../UniversalComponents/NavBar";
 import "./login.css";
+import { Link } from "react-router-dom";
+
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
@@ -43,14 +45,14 @@ function App() {
               required
             />
             <input
-              type="password"
+              type="Text"
               placeholder="Password"
               id="password"
               name="password"
               required
             />
             <input
-              type="password"
+              type="Text"
               placeholder="Re-enter Password"
               id="password"
               name="password"
@@ -63,7 +65,9 @@ function App() {
               <p>
                 Already Having an Account?{" "}
                 <b>
-                  <u>Login</u>
+                  <u><Link to="/login">
+              Login
+            </Link></u>
                 </b>
               </p>
             </a>

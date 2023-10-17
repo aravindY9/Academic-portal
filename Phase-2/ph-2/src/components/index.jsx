@@ -1,5 +1,7 @@
 // import NavBar from "../UniversalComponents/NavBar";
 import "./index.css";
+import { Link } from "react-router-dom";
+
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
@@ -7,9 +9,9 @@ function App() {
     <body>
       <nav>
         <div class="navbar-index">
-          <a href="#" class="logo-index">
+          <Link to="/index" className="logo-index">
             Mav Program
-          </a>
+          </Link>
         </div>
       </nav>
       <div class="college-banner-index">
@@ -20,25 +22,27 @@ function App() {
           <b>Welcome to our course portal, where learning meets opportunity.</b>
           <br />
           <div class="sub-content-txt">
-            Explore a world of knowledge and unlock your potential with our
-            diverse range of courses.
+            Check out our Blog <a href="https://axy2996.uta.cloud/#content" target="_blank">Here</a>
           </div>
         </div>
         <br />
         <br />
         <div class="btn-frame">
           <div class="login-btn">
-            <a href="login.html" class="login-btn-txt">
+            <Link to="/login" class="login-btn-txt-index">
               Login
-            </a>
+            </Link>
           </div>
           <div class="login-btn">
-            <a href="signUp.html" class="login-btn-txt">
+            <Link to="/signup" class="login-btn-txt-index">
               Signup
-            </a>
+            </Link>
           </div>
         </div>
+        <br />
+        <br />
       </div>
+
       <div class="homepage-content-2-index">
         <div class="homepage-content-2-txt-index"></div>
       </div>
@@ -48,15 +52,15 @@ function App() {
           <div class="footer-1">
             © Copyright 2023 Group 24. All rights reserved.
           </div>
-          <a href="services.html" class="footer-content">
+          <Link to="/services" className="footer-margin">
             Our Services
-          </a>
-          <a href="aboutUs.html" class="footer-content">
+          </Link>
+          <Link to="/about" className="footer-margin">
             About Us
-          </a>
-          <a href="contactUs.html" class="footer-content">
+          </Link>
+          <Link to="/contact" className="footer-margin">
             Contact Us
-          </a>
+          </Link>
         </div>
       </footer>
     </body>

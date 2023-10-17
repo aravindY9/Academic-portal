@@ -1,0 +1,142 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+
+.homepage-content {
+    margin-bottom: 10%;
+}
+
+.homepage-content-txt {
+    margin: 2%;
+    padding: 2%;
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 15px;
+    float: left;
+    color: white;
+    font-size: xxx-large;
+    font-weight: 600;
+    line-height: 1.75;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.send-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+    border-radius: 10px;
+    font-size: x-large;
+    font-weight: 600;
+    border: none;
+    background-color: rgba(30, 30, 30, 1);
+    color: white;
+    text-decoration: none;
+}
+
+/* .student-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    font-size: larger;
+    border: none;
+    list-style: none;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.student-list-item {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 4%;
+} */
+
+.select-course {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    width: 20%;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 2%;
+}
+
+th,
+td {
+    border: 0.5px solid rgb(65, 65, 65);
+    border-collapse: collapse;
+}
+
+table{
+    border: 1px solid rgb(8, 8, 8);
+    border-collapse: collapse;
+}
+
+.performance-table {
+    margin: 2%;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 5%;
+    width: 90%;
+    border-color: rgba(0, 0, 0, 0.21);
+    border: none;
+}
+
+.table-head {
+    background-color: rgba(50, 50, 50, 1);
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+    padding: 2%;
+}
+
+.table-row-1 {
+    background-color: rgba(215, 215, 215, 1);
+    color: rgb(0, 0, 0);
+    font-weight: 50;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+}
+
+.table-row-2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 50;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+}
+
+.perf {
+    float: left;
+}
+
+.grades {
+    float: right;
+    margin-right: 10%;
+    color: white;
+}

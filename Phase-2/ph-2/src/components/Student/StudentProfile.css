@@ -32,6 +32,8 @@
     border: none;
     background-color: white;
     font-weight: 600;
+    font-size: large;
+    color: black;
 }
 
 .submitButton:hover{
@@ -40,4 +42,6 @@
     border: none;
     background-color: rgb(223, 223, 223);
     font-weight: 600;
+    font-size: large;
+    color: black;
 }

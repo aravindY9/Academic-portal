@@ -1,5 +1,7 @@
 // import NavBar from "../UniversalComponents/NavBar";
 import "./index.css";
+import { Link } from "react-router-dom";
+
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
@@ -7,13 +9,14 @@ function App() {
     <body>
       <nav>
         <div class="navbar-about">
-          <a href="index.html" class="logo-about">
+          <Link to="/index" className="logo-index">
             Mav Program
-          </a>
+          </Link>
+
           <div class="login-btn-about">
-            <a href="login.html" class="login-btn-txt-about">
+            <Link to="/login" class="login-btn-txt-about">
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
@@ -92,19 +95,19 @@ function App() {
       <br />
       <br />
       <footer>
-        <div class="footer-about">
+        <div class="footer-index">
           <div class="footer-1">
             © Copyright 2023 Group 24. All rights reserved.
           </div>
-          <a href="services.html" class="footer-content">
+          <Link to="/services" className="footer-margin">
             Our Services
-          </a>
-          <a href="aboutUs.html" class="footer-content">
+          </Link>
+          <Link to="/about" className="footer-margin">
             About Us
-          </a>
-          <a href="contactUs.html" class="footer-content">
+          </Link>
+          <Link to="/contact" className="footer-margin">
             Contact Us
-          </a>
+          </Link>
         </div>
       </footer>
     </body>

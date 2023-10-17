@@ -36,9 +36,7 @@ function student() {
       </li>
       <br />
       <li>
-        <a href="" className="signOut">
-          Sign Out
-        </a>
+        <Link to="/" className="signOut">Sign Out</Link>
       </li>
     </div>
   );
@@ -73,13 +71,44 @@ function AdminNav() {
       </li>
       <br />
       <li>
-        <a href="" className="signOut">
-          Sign Out
-        </a>
+        <Link to="/" className="signOut">Sign Out</Link>
       </li>
     </div>
   );
 }
+
+function program() {
+  return (
+    <div className="navList">
+      <li
+        onClick={() => {
+          document.getElementsByClassName("navList")[0].style.transform =
+            "translateX(-120%)";
+        }}
+      >
+        <img src={cross} alt="" />
+      </li>
+      <li>Coordinator</li>
+      <li>
+        <Link to="/program/">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/program/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/program/course">Course</Link>
+      </li>
+      <li>
+        <Link to="/program/chat">Chat</Link>
+      </li>
+      <br />
+      <li>
+        <Link to="/" className="signOut">Sign Out</Link>
+      </li>
+    </div>
+  );
+}
+
 
 function instructor() {
   return (
@@ -113,9 +142,42 @@ function instructor() {
       </li>
       <br />
       <li>
-        <a href="" className="signOut">
-          Sign Out
-        </a>
+        <Link to="/" className="signOut">Sign Out</Link>
+      </li>
+    </div>
+  );
+}
+
+function qa() {
+  return (
+    <div className="navList">
+      <li
+        onClick={() => {
+          document.getElementsByClassName("navList")[0].style.transform =
+            "translateX(-120%)";
+        }}
+      >
+        <img src={cross} alt="" />
+      </li>
+      <li>QA</li>
+      <li>
+        <Link to="/qa">Dashboard</Link>
+      </li>
+      <li>
+        <Link to="/qa/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/qa/students">Students</Link>
+      </li>
+      <li>
+        <Link to="/qa/course">Courses</Link>
+      </li>
+      <li>
+        <Link to="/qa/chat">Chat</Link>
+      </li>
+      <br />
+      <li>
+        <Link to="/" className="signOut">Sign Out</Link>
       </li>
     </div>
   );
@@ -128,11 +190,17 @@ function whichNav(navto) {
     return <AdminNav />;
   } else if (navto === "instructorNav") {
     return instructor();
+  }else if (navto === "program") {
+    return program();
+  }else if (navto === "qanav") {
+    return qa();
   }
   // else if(navto === "dashboard"){
   //   return dashboard();
   // }
 }
+
+
 function NavBar(props) {
   // const btn = document.getElementById("menuBtn");
   // btn.addEventListener("click", () => {

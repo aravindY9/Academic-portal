@@ -10,11 +10,11 @@ function Details(props) {
           <b>Email:</b> {props.email} <br />
           <b>UTA ID:</b> {props.id}
         </div>
-        <div class="login-btn">
+        {/* <div class="login-btn">
           {/* <a href="" class="login-btn-txt-2">
             Sign Out
           </a> */}
-        </div>
+        
       </div>
     </div>
   );

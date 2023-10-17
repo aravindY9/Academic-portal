@@ -55,6 +55,7 @@ body{
     align-items: center; */
     background-color: rgba(50, 50, 50, 1);
     border-radius: 10px;
+    color: white;
     /* padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 5%;
@@ -66,7 +67,7 @@ body{
     width: 40%;
 }
 
-input[type="text"],
+.log-input,
 input[type="password"] {
     
     width: 85%;
@@ -181,7 +182,7 @@ input[type="password"] {
 }
 
 a{
-    text-decoration: none;
+    /* text-decoration: none; */
     color:#ccc;
 }
 .fgp{
@@ -207,7 +208,7 @@ label {
     
 }
 p{
-    color: #ccc;
+    /* color: #ccc; */
 }
 
 .footer {

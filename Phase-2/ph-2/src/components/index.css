@@ -162,7 +162,7 @@ body {
 
 .homepage-content-txt-index, .homepage-content-txt-about {
     color: white;
-    font-size: large;
+    font-size: x-large;
     line-height: 1.75;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -244,7 +244,7 @@ body {
 .sub-content-txt {
     font-weight: 200;
     color: rgb(192, 192, 192);
-    font-size: medium;
+    font-size: x-large;
 }
 .sub-content-txt-1{
     color: rgb(255, 255, 255);
@@ -344,6 +344,14 @@ body {
     text-decoration: none;
     margin-right: 0px;
 }
+.login-btn-txt-index {
+    color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: x-large;
+    text-decoration: none;
+    margin-right: 0px;
+}
 
 .btn-frame {
     display: flex;
@@ -421,7 +429,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     background-color: rgba(50, 50, 50, 1);
     margin-top: 0px;
     margin-bottom: 0px;
@@ -469,4 +477,14 @@ body {
     color: white;
     margin-right: 2%;
     padding: 0px;
+}
+
+.footer-margin{
+    margin: 7px;
+}
+
+.i-blogmsg{
+    margin-top: 5%;
+    font-size: x-large;
+    color: white;
 }

@@ -28,6 +28,31 @@ import InstructorGradeStudent from './components/Instructor/InstructorGradeStude
 import InstructorHome from './components/Instructor/InstructorHome';
 import InstructorProfile from './components/Instructor/InstructorProfile';
 import InstructorStudents from './components/Instructor/InstructorStudents';
+
+import Index from './components/index';
+import Login from './components/Login';
+import Signup from './components/SignUp';
+import Password from './components/ForgotPassword';
+import About from './components/AboutUs';
+import Services from './components/OurServices';
+import Contact from './components/ContactUs';
+import Navigate from './components/Navigate';
+
+import ProgramHome from './components/Program/ProgramHome';
+import ProgramProfile from './components/Program/ProfilePage';
+import ProgramCourse from './components/Program/InstructorHome';
+import ProgramChat from './components/Program/ChatPage';
+import ProgramViewPerformance from './components/Program/ViewPerformance';
+
+import QAHome from './components/QA/QaHome';
+import QAChat from './components/QA/QaChat';
+import QACourseDetails from './components/QA/QaCourseDetails';
+import QACourses from './components/QA/QaCourses';
+import QAProfile from './components/QA/QaProfile';
+import QAStudentPerformance from './components/QA/QaStudentPerformance';
+import QAStudents from './components/QA/QaStudents';
+// import Blog from 'https://axy2996.uta.cloud/uncategorized/disadvantage/';
+
 // import StudentChat from './components/Student/StudentChat';
 // import
 
@@ -45,6 +70,7 @@ function App() {
         <Route path="/admin/course" element={<CoursePage />} />
         <Route path="/admin/editcourse" element={<EditCourses />} />
         <Route path="/admin/editaccount" element={<EditAccount />} />
+        
         {/* Student Routes */}
         <Route path="/Student/" element={<StudentHome/>} />
         <Route path="/Student/StudentCourses" element={<StudentCourse/>} />
@@ -66,6 +92,33 @@ function App() {
         <Route path="/Instructor/createCourse" element={<InstructorCreateCourse/>} />
         <Route path="/Instructor/profile" element={<InstructorProfile/>} />
         <Route path="/Instructor/Student" element={<InstructorStudents/>} />
+
+        {/* Index Routes */}
+        <Route path="/" element={<Index/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/services" element={<Services/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup/>} />
+        <Route path='/password' element={<Password/>} />
+        <Route path='/navigate' element={<Navigate/>} />
+
+        {/* Program Coordinator Routes */}
+        <Route path="/program" element={<ProgramHome />} />
+        <Route path="/program/profile" element={<ProgramProfile />} />
+        <Route path="/program/chat" element={<ProgramChat />} />
+        <Route path="/Program/course" element={<ProgramCourse />} />
+        <Route path="/Program/viewperformance" element={<ProgramViewPerformance />} />
+
+        {/* Program Coordinator Routes */}
+        <Route path="/qa" element={<QAHome />} />
+        <Route path="/qa/chat" element={<QAChat />} />
+        <Route path="/qa/coursedetails" element={<QACourseDetails />} />
+        <Route path="/qa/course" element={<QACourses />} />
+        <Route path="/qa/profile" element={<QAProfile />} />
+        <Route path="/qa/studentperformance" element={<QAStudentPerformance />} />
+        <Route path="/qa/students" element={<QAStudents />} />
+        {/* <Route path="/Blog" element={<Blog/>} /> */}
       </Routes>
     </BrowserRouter>
   );

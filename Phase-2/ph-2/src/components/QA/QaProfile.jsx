@@ -1,5 +1,5 @@
 import NavBar from "../UniversalComponents/NavBar";
-import "./InstructorStyle.css";
+import "../Instructor/InstructorStyle.css";
 
 // import Header from './components/UniversalComponents/Header';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="ip-mainBody">
       <div className="pageFormat">
-        <NavBar x="instructorNav" />
+        <NavBar x="qanav" />
       </div>
       <br />
       <br />

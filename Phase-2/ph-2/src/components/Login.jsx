@@ -1,44 +1,56 @@
-// import NavBar from "../UniversalComponents/NavBar";
-import "./login.css";
-// import Header from './components/UniversalComponents/Header';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function App() {
-  return (
-    <body>
-      <div class="navbar">
-        <a href="index.html" class="logo">
-          Mav Program
-        </a>
-      </div>
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-      <div class="login-container">
-        <div class="form-group">
-          <input type="text" placeholder="Email" id="username" name="Email" />
-          <br />
-          <input
-            type="password"
-            placeholder="Password"
-            id="Email"
-            name="Password"
-          />
-          <br />
-          <button>
-            <a href="selectUser.html">Sign In</a>
-          </button>
-          <br />
-          <a href="signUp.html">
-            New User? <b>Create Account</b>
-          </a>
-          <br />
-          <p>
-            <a href="forgot.html" class="fgp">
-              Forgot password?
-            </a>
-          </p>
-        </div>
+  const handleLogin = () => {
+    if (email === 'bruce@gmail.com' && password === 'password123') {
+      navigate('/admin');
+    } else if (email === 'clark@gmail.com' && password === 'password123'){
+      navigate("/student");
+      
+    }else if (email === 'diana@gmail.com' && password === 'password123'){
+      navigate("/instructor");
+    }else if (email === 'blue@gmail.com' && password === 'password123'){
+      navigate("/program");
+    }else if (email === 'tony@gmail.com' && password === 'password123'){
+      navigate("/qa");
+    }else{
+        alert('Invalid email or password');
+    }
+  }
+
+  return (
+    <div className="login-container">
+      <div className="form-group">
+        <input
+          type="text"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="log-input"
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="log-input"
+        />
+        <br />
+        <button onClick={handleLogin}>Sign In</button>
+        <br />
+        New User? <Link to="/signup"><b>Create Account</b></Link>
+        <br />
+        <p><Link to="/password" className="fgp">Forgot password?</Link></p>
       </div>
-    </body>
+    </div>
   );
 }
 
 export default App;
+

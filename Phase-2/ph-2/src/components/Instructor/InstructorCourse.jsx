@@ -115,7 +115,7 @@ function App() {
                 <a href="" className="ic-deleteButton">
                   Delete
                 </a>
-              </td>
+              </td> 
             </tr>
             <tr>
               <td className="ih-td">

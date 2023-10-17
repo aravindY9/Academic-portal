@@ -36,9 +36,7 @@ body {
     margin-top: 1%;
 }
 
-input,
-select,
-textarea {
+.editinput {
     display: inline;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1%;

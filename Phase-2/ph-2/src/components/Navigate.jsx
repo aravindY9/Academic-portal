@@ -9,7 +9,7 @@ function App() {
     <body>
       <nav>
         <div class="navbar-contact">
-          <Link to="/" className="logo-index">
+          <Link to="/index" className="logo-index">
             Mav Program
           </Link>
 
