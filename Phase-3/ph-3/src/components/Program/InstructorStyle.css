@@ -1,0 +1,231 @@
+.studentBody {
+  padding: 5%;
+}
+
+.welcomeMsg {
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  margin-bottom: 3%;
+}
+
+.ih-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(30, 30, 30, 1);
+  color: #fff;
+  overflow-y: auto;
+  margin-left: 0;
+}
+
+.ih-th,
+.ih-td {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #4b4b4b;
+  font-size: 60%;
+  /* padding: 1.5%; */
+}
+
+.ih-th {
+  background-color: #333;
+}
+
+.ih-td a {
+  color: white;
+}
+
+.studentLabel {
+  margin-bottom: 1%;
+  font-size: x-large;
+  color: white;
+}
+
+.ih-mainBody {
+  background-color: rgba(30, 30, 30, 1);
+  height: 100%;
+}
+
+.course-obj {
+  text-align: left;
+  color: white;
+  font-size: x-large;
+  line-height: 1.75;
+  text-decoration: none;
+  margin-top: 3%;
+}
+
+.course-obj-txt {
+  text-align: left;
+  color: white;
+  font-size: large;
+  font-weight: 200;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  background-color: rgba(50, 50, 50, 1);
+  padding: 1%;
+  border-radius: 10px;
+}
+
+.ih-txtarea {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  border: none;
+  width: 50%;
+  margin: 0;
+}
+
+.ih-publishButton {
+  cursor: pointer;
+  background-color: rgb(0, 96, 205);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  text-decoration: none;
+  border: none;
+}
+
+/* .ih-publishButton:hover{
+    background-color: rgb(65, 91, 121);
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10%;
+    font-size: large;
+    text-decoration: none;
+} */
+
+.ih-publishButton:hover {
+  background-color: rgb(0, 81, 174);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  text-decoration: none;
+  border: none;
+}
+
+.ip-updateInput {
+  width: 50%;
+  /* font-size: 10%; */
+  padding: 0.7%;
+  border-radius: 5px;
+  margin-bottom: 1%;
+  margin-top: 0;
+  margin-right: 1%;
+  margin-left: 0;
+}
+
+.ip-updateTextArea {
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50%;
+  padding: 0.7%;
+  border-radius: 5px;
+  margin-bottom: 0%;
+  margin-left: 0;
+}
+
+.ip-submitButton {
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  font-size: large;
+}
+
+.ip-submitButton:hover {
+  padding: 15px;
+  border-radius: 5px;
+  color: black;
+  border: none;
+  background-color: rgb(224, 224, 224);
+  font-weight: 600;
+  font-size: large;
+}
+
+.ip-mainBody {
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 1);
+}
+
+.ic-createAssign {
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  background-color: rgb(0, 96, 205);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.ic-createAssign:hover {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(0, 77, 165);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+.is-search {
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  background-color: rgb(0, 96, 205);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 60%;
+  border: none;
+  width: 8%;
+  margin-left: 1%;
+}
+
+.is-search:hover {
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  background-color: rgb(0, 83, 177);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 60%;
+  border: none;
+  width: 8%;
+  margin-left: 1%;
+}
+
+.tempMargin {
+  margin: 1.5%;
+}
+
+.ih-td .ic-deleteButton {
+  color: rgb(255, 81, 81);
+  /* font-size: 60%; */
+}
+
+.ice-input {
+  font-size: medium;
+  padding: 15px;
+  width: 40%;
+  margin-bottom: 1%;
+  margin-left: 0;
+}
+
+.is-input {
+  font-size: large;
+  padding: 15px;
+  width: 50%;
+  margin-bottom: 1%;
+  margin-left: 0;
+}

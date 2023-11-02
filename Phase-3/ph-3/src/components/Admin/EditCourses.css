@@ -1,0 +1,68 @@
+/* Vishal Reddy Vancha (1002076184) Aryan Rahul Verma (1002079331) Sanjay Kumar Vontela (1002090448)
+Aravind Yalla (1002038759) Abhishek Reddy Yaramala (1002072996) 
+Font: 'Inter', sans-serif, Arial; Color: Black, Gray, White, Red, Green, Blue, rgba(30, 30, 30, 1), rgba(50, 50, 50, 1)*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(30, 30, 30, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+.editCourse-section {
+    display: block;
+    /* margin: 0 auto; */
+    margin-top: 8%;
+    background-color: rgba(50, 50, 50, 1);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    /* display: flex; */
+}
+
+.course-label {
+    color: white;
+    font-size: xx-large;
+    font-weight: 500;
+    line-height: 1.75;
+    text-decoration: none;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.editinput {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    border-radius: 10px;
+    font-size: larger;
+    border: none;
+    width: 40%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+textarea {
+    width: 83%;
+}
+
+
+
+.edit-course {
+    background-color: rgba(30, 30, 30, 1);
+    color: #ffffff;
+    padding: 2% 5%;
+    border: none;
+    border-radius: 5px;
+    font-size: 120%;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}

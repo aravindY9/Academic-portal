@@ -1,0 +1,10 @@
+.pageFormat {
+  display: flex;
+  flex-direction: row;
+  /* height: 100vh; */
+}
+
+.mainBody{
+  background-color: rgba(30, 30, 30, 1);
+  height: 100vh;
+}

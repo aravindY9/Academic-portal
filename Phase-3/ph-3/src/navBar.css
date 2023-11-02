@@ -1,0 +1,88 @@
+.nav {
+    height: 100%;
+}
+
+.navList li {
+    color: rgb(180, 180, 180);
+    list-style: none;
+    margin-left: none;
+    font-size: xxx-large;
+    font-weight: 600;
+    padding: 0.1rem 2rem;
+}
+
+.navList {
+    width: 300px;
+    /* padding: 3%; */
+    /* padding: 15%; */
+    position: fixed;
+    background-color: rgba(50, 50, 50, 1);
+    height: 200%;
+    transform: translateX(-120%);
+    /* transform: translateX(-2000px); */
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 600;
+    /* padding: 10%; */
+    padding-left: 0;
+}
+
+li a:hover {
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 700;
+    /* padding: 10%; */
+    padding-left: 0;
+}
+
+.header {
+    background-color: rgba(50, 50, 50, 1);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    align-items: center;
+    text-align: left;
+    font-size: xx-large;
+    font-weight: 600;
+    /* padding-top: 50px; */
+    /* z-index: 1000; */
+}
+
+.header img {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-right: 3%;
+}
+
+li img {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin-right: 3%;
+}
+
+.signOut{
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    padding: 3% 5%;
+    border-radius: 5px;
+}
+
+.signOut:hover{
+    background-color: rgb(175, 175, 175);
+    color: black;
+    font-weight: 700;
+    padding: 3% 5%;
+    border-radius: 5px;
+}
+

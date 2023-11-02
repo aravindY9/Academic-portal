@@ -1,0 +1,122 @@
+.studentBody {
+  padding: 5%;
+  /* height: 250%; */
+}
+
+.welcomeMsg {
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  margin-bottom: 3%;
+}
+
+.student-table-course {
+  height: 100px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(30, 30, 30, 1);
+  color: #fff;
+  margin-left: 0%;
+}
+
+.student-course-td-th{
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #4b4b4b;
+  font-size: 120%;
+  /* padding: 1.5%; */
+}
+
+th {
+  background-color: #333;
+}
+
+td a {
+  color: white;
+}
+
+.stco-tableScroll {
+  overflow:scroll;
+  overflow-x: hidden;
+  height: 60vh;
+  border: 1px solid #4b4b4b;
+
+}
+
+.stco-studentLabel {
+  font-size: xx-large;
+  color: white;
+}
+
+.stco-mainBody {
+  background-color: rgba(30, 30, 30, 1);
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.course-obj {
+  text-align: left;
+  color: white;
+  font-size: x-large;
+  line-height: 1.75;
+  text-decoration: none;
+  margin-top: 3%;
+}
+
+.course-obj-txt {
+  text-align: left;
+  color: white;
+  font-size: large;
+  font-weight: 200;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  background-color: rgba(50, 50, 50, 1);
+  padding: 1%;
+  border-radius: 10px;
+}
+
+.stco-search-button {
+  background-color: rgba(50, 50, 50, 1);
+  color: #ffffff;
+  padding: 1%;
+  border: none;
+  width: 9%;
+  border-radius: 5px;
+  font-size: 80%;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-left: 0.5%;
+  margin-bottom: 3%;
+}
+
+.stco-search-button:hover {
+  background-color: rgb(43, 43, 43);
+  color: #ffffff;
+  padding: 1%;
+  border: none;
+  width: 9%;
+  border-radius: 5px;
+  font-size: 80%;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0px;
+  margin-left: 0.5%;
+}
+
+.stco-searchCourse{
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1%;
+  border-radius: 5px;
+  font-size: 80%;
+  border: none;
+  width: 88%;
+  margin-bottom: 2%;
+  margin-right: 0px;
+}
