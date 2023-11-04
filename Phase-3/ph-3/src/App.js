@@ -80,15 +80,15 @@ function App() {
         {/* Student Routes */}
         <Route path="/Student/" element={<StudentHome/>} />
         <Route path="/Student/StudentCourses" element={<StudentCourse/>} />
-        <Route path="/Student/StudentExams" element={<StudentExams/>} />
+        <Route path="/Student/StudentExams/:courseID" element={<StudentExams/>} />
         <Route path="/Student/StudentFeedback" element={<StudentFeedback/>} />
         <Route path="/Student/StudentChat" element={<StudentChat/>} />
         <Route path="/Student/StudentProfile" element={<StudentProfile/>} />
         <Route path="/Student/StudentAssignment" element={<StudentAssignment/>} />
 
-        {/* Instructor Routes */}
-        <Route path="/Instructor/" element={<InstructorHome/>} />
-        <Route path="/Instructor/Courses" element={<InstructorCourse/>} />
+         {/* Instructor Routes */}
+         <Route path="/Instructor/" element={<InstructorHome/>} />
+        <Route path="/Instructor/Courses/:courseID" element={<InstructorCourse/>} />
         <Route path="/instructor/CreateExams" element={<InstructorCreateExam/>} />
         <Route path="/Instructor/editExam" element={<InstructorEditExam/>} />
         <Route path="/Instructor/createAssignment" element={<InstructorCreateAssignment/>} />
@@ -115,15 +115,15 @@ function App() {
         <Route path="/program/profile" element={<ProgramProfile />} />
         <Route path="/program/chat" element={<ProgramChat />} />
         <Route path="/Program/course" element={<ProgramCourse />} />
-        <Route path="/Program/viewperformance" element={<ProgramViewPerformance />} />
+        <Route path="/Program/viewperformance/:StudentId" element={<ProgramViewPerformance />} />
 
-        {/* Program Coordinator Routes */}
+        {/* QA Routes */}
         <Route path="/qa" element={<QAHome />} />
         <Route path="/qa/chat" element={<QAChat />} />
-        <Route path="/qa/coursedetails" element={<QACourseDetails />} />
+        <Route path="/qa/coursedetails/:courseID" element={<QACourseDetails />} />
         <Route path="/qa/course" element={<QACourses />} />
         <Route path="/qa/profile" element={<QAProfile />} />
-        <Route path="/qa/studentperformance" element={<QAStudentPerformance />} />
+        <Route path="/qa/studentperformance/:studentId" element={<QAStudentPerformance />} />
         <Route path="/qa/students" element={<QAStudents />} />
         {/* <Route path="/Blog" element={<Blog/>} /> */}
       </Routes>

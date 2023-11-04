@@ -75,7 +75,7 @@ function CreateUser() {
             <NavBar x="admin" />
             <div className="main-section">
                 <section className="editAccount-section">
-                    <div className="course-label">Edit user details: <b></b></div>
+                    <div className="course-label">Enter user details: <b></b></div>
                     <input
                         type="text"
                         name="name"
@@ -113,7 +113,7 @@ function CreateUser() {
                         onChange={(e) => setUserData({ ...userData, PERMISSION_VALUE: e.target.value })}
                     /><br />
                     <button type="submit" className="edit-account" onClick={upload}>
-                        Edit
+                        Submit
                     </button>
                 </section>
             </div>

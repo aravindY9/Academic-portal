@@ -1,10 +1,36 @@
 import NavBar from "../UniversalComponents/NavBar";
 import "../Instructor/InstructorStyle.css";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
+  const [accountData, setAccountData] = useState([]);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+      fetch("http://localhost/QA/api.php", {
+        credentials: 'include',
+      })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`Response status is not 200: ${response.status}`);
+        }
+      })
+          .then((data) => setAccountData(data))
+          .catch((error) => setError(error));
+  }, []);
+  if (error) {
+    // Handle the error condition, e.g., server is down
+    return <div>Access Denied: Server is not responding.</div>;
+  }
+  
+      
+  
+
+
   return (
     <div className="stco-mainBody">
       <div className="pageFormat">
@@ -32,122 +58,38 @@ function App() {
               <th className="ih-th">Grade</th>
               <th className="ih-th">Actions</th>
             </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Liam Wilson</p>
-              </td>
-              <td className="ih-td">
-                <p>1003987654</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>A</p>
-              </td>
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Sophia Patel</p>
-              </td>
-              <td className="ih-td">
-                <p>1006214875</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>B</p>
-              </td>
+            
+            {accountData.map(function mapentries(data) {
+              console.log(data);
+                        return (
+                            
+                                <tr>
+                                <td className="ih-td">
+                                  <p>{data.Name}</p>
+                                </td>
+                                <td className="ih-td">
+                                  <p>{data.ID}</p>
+                                </td>
+                                <td className="ih-td">{data.Course}</td>
+                                <td className="ih-td">
+                                  <p>{data.Grade}</p>
+                                </td>
+                                <td className="ih-td">
+                                  <Link to={`/qa/studentperformance/${data.ID}`}>View</Link>
+                                </td>
+                              </tr>
 
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Ethan Ramirez</p>
-              </td>
-              <td className="ih-td">
-                <p>1005392168</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>D</p>
-              </td>
-
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Olivia Anderson</p>
-              </td>
-              <td className="ih-td">
-                <p>1008745923</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>B</p>
-              </td>
-
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Sophia Patel</p>
-              </td>
-              <td className="ih-td">
-                <p>1006214875</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>B</p>
-              </td>
-
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Ethan Ramirez</p>
-              </td>
-              <td className="ih-td">
-                <p>1005392168</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>D</p>
-              </td>
-
-              <td className="ih-td">
-                <Link to="/qa/studentperformance">View</Link>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Olivia Anderson</p>
-              </td>
-              <td className="ih-td">
-                <p>1008745923</p>
-              </td>
-              <td className="ih-td">CSE5335</td>
-              <td className="ih-td">
-                <p>B</p>
-              </td>
-
-              <td className="ih-td">
-                <a href="studentProgressDetails.html">view</a>
-              </td>
-            </tr>
+                            );
+                    })}
           </table>
         </div>
       </div>
     </div>
   );
+
+
+
 }
+
 
 export default App;

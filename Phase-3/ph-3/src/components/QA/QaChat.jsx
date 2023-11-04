@@ -1,9 +1,31 @@
 import NavBar from "../UniversalComponents/NavBar";
 import "../Instructor/Chat.css";
-
+import React, { useEffect, useState } from "react";
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
+  const [error, setError] = useState(null);
+  useEffect(() => {
+      fetch("http://localhost/QA/api.php", {
+        credentials: 'include',
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error(`Response status is not 200: ${response.status}`);
+          }
+        })
+        .then((data) => null)
+        .catch((error) => setError(error));
+    }, []);
+  
+    if (error) {
+      // Handle the error condition, e.g., server is down
+      return <div>Access Denied: Server is not responding.</div>;
+    }
+
+
   return (
     <div className="sch-mainBody">
       <div className="pageFormat">

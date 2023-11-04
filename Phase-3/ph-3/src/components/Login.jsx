@@ -15,17 +15,23 @@ function App() {
       body: JSON.stringify({ email, password }),
       credentials: 'include',
     })
+    
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
           // Successful login, navigate based on the role
           console.log(data.role.toLowerCase());
-          if (data.role.toLowerCase() === 'student') {
+          if (data.role.toLowerCase() === "student") {
+            console.log(data.role.toLowerCase());
             navigate('/student');
           } else if (data.role.toLowerCase() === 'instructor') {
             navigate('/instructor');
           } else if (data.role.toLowerCase() === 'admin') {
             navigate('/admin');
+          }else if (data.role.toLowerCase() === 'qa') {
+            navigate('/qa');
+          }else if (data.role.toLowerCase() === 'pc') {
+            navigate('/program');
           }
         } else {
           // Invalid email or password
@@ -36,7 +42,7 @@ function App() {
         console.error('Error during login:', error);
       });
   }
-
+  console.log(JSON.stringify({ email, password }));
 
   return (
     <div className="login-container">

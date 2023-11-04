@@ -1,9 +1,54 @@
 import NavBar from "../UniversalComponents/NavBar";
 import Table from "../UniversalComponents/Table";
 import "../Student/StudentExams.css";
+import React, { useEffect, useState } from "react";
+import { useParams,useNavigate } from "react-router-dom";
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
+  const { courseID } = useParams();
+  // console.log(courseID);
+  const [userData, setUserData] = useState([
+    {Course:"",	
+      coursecode:"",	
+      numberofstudents:"",	
+      roomnumber:"",	
+      totavggrades:"",
+    quiz1:"",
+  assignment1:"",
+  quiz2:"",
+  assignment2:"",
+  project:"",
+instructorname:"",
+instructormail:""}
+  ]);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    // Fetch user data using the 'userId' parameter
+    fetch(`http://localhost/QA/fetchCourseData.php?id=${courseID}`, {
+      credentials: 'include',
+    })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error(`Response status is not 200: ${response.status}`);
+      }
+    })
+        .then((data) => {
+            // Set the fetched user data in the state
+            // console.log(data[0]);
+            setUserData(data[0]);
+        })
+        .catch((error) => setError(error))
+}, [courseID]);
+
+
+// console.log(userData);
+if (error) {
+  // Handle the error condition, e.g., server is down
+  return <div>Access Denied: Server is not responding.</div>;
+}
   return (
     <div className="mainBody">
       <div className="pageFormat">
@@ -12,34 +57,34 @@ function App() {
       <br />
       <br />
       <div className="studentBody">
-        <select name="" id="" className="selectCourse">
+        {/* <select name="" id="" className="selectCourse">
           <option value="">Change Course</option>
           <option value="">CSE 5335</option>
           <option value="">CSE 5338</option>
           <option value="">CSE 6363</option>
         </select>
-        <br />
-        Course: CSE 5338
+        <br /> */}
+        Course: {userData.coursecode}
         <div className="subContentTxt">
-          Information Security-1
+          {userData.Coursename}
           <br />
-          <b>Instructor: </b> Liam Wilosn
+          <b>Instructor: </b> {userData.Instructorname}
           <br />
-          <b>Email: </b> lsw2341@mavs.uta.edu
+          <b>Email: </b> {userData.Instructormail}
           <br />
-          <b>Room: </b>NH100 <br />
+          <b>Room: </b>{userData.roomnumber} <br />
           <br />
-          <a href="" className="syllabus">
+          {/* <a href="" className="syllabus">
             Download Syllabus
-          </a>
+          </a> */}
           {/* <br /><br />
           Assignments:
           <Table x="assessmentTabStudent"/> */}
-          <br />
-          <br />
-          <div className="grades">
+          
+          
+          {/* <div className="grades">
             Total Grade: <b>A</b>
-          </div>
+          </div> */}
           <table className="t-table">
             <tr>
               <th className="t-th">Exam Name</th>
@@ -50,7 +95,7 @@ function App() {
                 <p>Quiz-1</p>
               </td>
               <td className="t-td">
-                <p>80.25/100</p>
+                <p>{userData.quiz1}</p>
               </td>
             </tr>
             <tr>
@@ -58,7 +103,7 @@ function App() {
                 <p>Assignment-1</p>
               </td>
               <td className="t-td">
-                <p>85.21/100</p>
+                <p>{userData.assignment1}</p>
               </td>
             </tr>
             <tr>
@@ -66,7 +111,7 @@ function App() {
                 <p>Quiz-2</p>
               </td>
               <td className="t-td">
-                <p>85.53/100</p>
+                <p>{userData.quiz2}</p>
               </td>
             </tr>
             <tr>
@@ -74,7 +119,7 @@ function App() {
                 <p>Assignment-2</p>
               </td>
               <td className="t-td">
-                <p>90.02/100</p>
+                <p>{userData.assignment2}</p>
               </td>
             </tr>
             <tr>
@@ -82,7 +127,7 @@ function App() {
                 <p>Project</p>
               </td>
               <td className="t-td">
-                <p>92.01/100</p>
+                <p>{userData.project}</p>
               </td>
             </tr>
           </table><br />

@@ -1,45 +1,121 @@
+import React, { useEffect, useState } from "react";
 import NavBar from "../UniversalComponents/NavBar";
-import "../Instructor/InstructorStyle.css";
+import {useNavigate } from "react-router-dom";
+function ProfilePage() {
+  const navigate = useNavigate()
+  const [profileData, setProfileData] = useState([]);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    fetch('http://localhost/QA/profile.php', {
+      credentials: 'include',
+    })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error(`Response status is not 200: ${response.status}`);
+      }
+    })
+      .then((data) => {
+        // console.log(data); // Log the response
+        setProfileData(data[0]);
+      })
+      .catch((error) => setError(error));
+  }, []); 
+  if (error) {
+    // Handle the error condition, e.g., server is down
+    return <div>Access Denied: Server is not responding.</div>;
+  }
 
-// import Header from './components/UniversalComponents/Header';
+  // Check if profileData is not empty before accessing its properties
+  const handleEdit = () => {
+    // Define the updated user data
+    const updatedProfileData = {
+        id: profileData.ID,
+        NAME: profileData.NAME,
+        TYPE: profileData.TYPE,
+        email: profileData.email,
+        PERMISSION_NAME: profileData.PERMISSION_NAME,
+        PERMISSION_VALUE: profileData.PERMISSION_VALUE,
+    };
+    console.log(JSON.stringify(updatedProfileData));
+    // Send a POST request to update the user data
+    fetch(`http://localhost/QA/updateUserData.php`, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
 
-function App() {
+      },
+      credentials:"include",
+      body: JSON.stringify(updatedProfileData),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+          if (data.message) {
+              // Handle a successful update
+              // alert(data.message);
+              navigate("/QA/profile");
+          } else {
+              // Handle errors
+              alert(data.error);
+          }
+      })
+      .catch((error) => {
+          // Handle network or request errors
+          console.error("Error updating user data:", error);
+      });
+
+};
   return (
-    <div className="ip-mainBody">
-      <div className="pageFormat">
-        <NavBar x="qanav" />
+    <div>
+      <NavBar x="qanav" />
+      <div className="homepage-content">
+        <div className="homepage-content-txt">
+          Admin Details:
+          <div className="sub-content-txt">
+            <b>Name:</b> {profileData.NAME} <br />
+            <b>Email:</b> {profileData.email} <br />
+            <b>UTA ID:</b> {profileData.ID}
+          </div>
+        </div>
       </div>
-      <br />
-      <br />
-      <div className="studentBody">
-        <div>
-          <b>Name:</b> Adam John <br />
-          <b>InstructorID:</b> 1002937446 <br />
-          <b>Email:</b> asj2389@mavs.uta.edu <br />
-          <br />
-          <br />
-          <b>Update Details:</b>
+      <div>
+        <br /> <br />
+        <div className="feedback-label">
+          <div className="feedback-txt">Update details:</div>
           <br />
           <input
             type="text"
-            placeholder="Enter Phone Number"
-            className="ip-updateInput"
-          /> <br />
-          <textarea
-            name=""
-            id=""
-            placeholder="Enter Address"
-            cols="30"
-            rows="10"
-            className="ip-updateTextArea"
-          ></textarea>
+            className="update-details-inp"
+            placeholder="Enter name"
+            value={profileData.NAME}
+            onChange={(e) => setProfileData({ ...profileData, NAME: e.target.value })}
+          />
           <br />
-          <button className="ip-submitButton"> Save</button>
+          <input
+            type="text"
+            className="update-details-inp"
+            placeholder="Enter email"
+            value={profileData.email}
+            onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+          />
+          <br />
+          <input
+            type="text"
+            className="update-details-inp"
+            placeholder="Enter ID"
+            value={profileData.ID}
+            onChange={(e) => setProfileData({ ...profileData, id: e.target.value })}
+          />
+          <br />
+          <button className="feedback-submit-btn" onClick={handleEdit}>Update</button>
         </div>
-
+        <br />
+        <br />
+        <br />
       </div>
     </div>
   );
 }
 
-export default App;
+export default ProfilePage;

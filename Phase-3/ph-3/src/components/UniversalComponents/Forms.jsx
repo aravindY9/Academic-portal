@@ -1,15 +1,18 @@
 import React from "react";
 import "../../Forms.css";
 
-function studentFeedback() {
+function studentFeedback(props) {
+
+
+  
   return (
       <form action="">
-        Feedback <br /> 
+        Give Feedback <br /> 
         <input type="number" placeholder="Enter StudentID" className="formInput"/>
         <br />
         <textarea name="" id="" cols="30" rows="10" placeholder="Enter Feedback" className="formTextArea"></textarea>
         <br />
-        <button className="submit">Submit</button>
+        <button className="submit" onClick={props.function}>Submit</button>
       </form>
   );
 }

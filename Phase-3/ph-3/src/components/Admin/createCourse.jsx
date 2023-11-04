@@ -104,7 +104,7 @@ function CreateCourse() {
         <div>
             <NavBar x="admin" />
             <section className="editCourse-section">
-                <div className="course-label">Edit course details: <b></b></div>
+                <div className="course-label">Enter course details: <b></b></div>
                 <input
                     className="editinput"
                     type="text"

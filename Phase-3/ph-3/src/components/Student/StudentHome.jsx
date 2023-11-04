@@ -1,10 +1,30 @@
 import NavBar from "../UniversalComponents/NavBar";
 import "./StudentHome.css";
 import { Link } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
+import CreateTable from "./components/CreateTable";
+// import "./AccountPage.css";
+import TableEntries from "./components/TableEntries";
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
+  const [courseData, setCourseData] = useState([]);
+  // const [error, setError] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost/student/coursedata.php", {
+      credentials: "include",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`Response status is not 200: ${response.status}`);
+        }
+      })
+      .then((data) => setCourseData(data))
+      // .catch((error) => setError(error));
+  }, []);
+  console.log(courseData);
   return (
     <div className="mainBody">
       <div className="pageFormat">
@@ -17,42 +37,24 @@ function App() {
           Welcome to the <b>Student Hub</b>
         </div>
         <div className="studentLabel">My Courses:</div>
-        <table className="student-home-table">
-          <tr>
-            <th className="student-home-th-td">Course</th>
-            <th className="student-home-th-td">Course Code</th>
-            <th className="student-home-th-td">Grades</th>
-          </tr>
-          <tr>
-            <td className="student-home-th-td">
-              <Link to="/student/StudentExams">Software Design Patterns</Link>
-            </td>
-            <td className="student-home-th-td">
-              <p>CSE5363</p>
-            </td>
-            <td className="student-home-th-td">B</td>
-          </tr>
-          <tr>
-            <td className="student-home-th-td">
-              <Link to="/student/StudentExams">Cloud Computing</Link>
-            </td>
-            <td className="student-home-th-td">
-              <p>CSE5332</p>
-            </td>
+        <div>
+        <CreateTable
 
-            <td className="student-home-th-td">A</td>
-          </tr>
-          <tr>
-            <td className="student-home-th-td">
-              <Link to="/student/StudentExams">Machine Learning</Link>
-            </td>
-            <td className="student-home-th-td">
-              <p>CSE6363</p>
-            </td>
-
-            <td className="student-home-th-td">A</td>
-          </tr>
-        </table>
+              data={courseData.map(function mapentries(data) {
+                return (
+                  <TableEntries
+                    nm={data.COURSE}
+                    code={data.CODE}
+                    rno={data.ROOMNUMBER}
+                    time={data.DAY + ', ' + data.CLASSTIME}
+                    dur={data.DURATION}
+                    link={`StudentExams/${data.CODE}`}
+                  />
+                );
+              })}
+            />
+        </div>
+    
         <div class="course-obj">
           Course Objectives:
           <div class="course-obj-txt">

@@ -6,7 +6,7 @@ const SignOut = () => {
   useEffect(() => {
     // Send a request to your PHP signout script
     fetch('localhost/backend/signout.php', {
-      // method: 'POST', // You can use POST method for security
+      method: 'POST', // You can use POST method for security
       credentials: 'include', // Include cookies in the request
     })
       .then(response => {

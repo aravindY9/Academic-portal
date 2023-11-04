@@ -44,7 +44,9 @@ function ProfilePage() {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
+
       },
+      credentials:"include",
       body: JSON.stringify(updatedProfileData),
       })
       .then((response) => response.json())
@@ -95,7 +97,7 @@ function ProfilePage() {
             className="update-details-inp"
             placeholder="Enter email"
             value={profileData.email}
-            onChange={(e) => setProfileData({ ...profileData, NAME: e.target.value })}
+            onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
           />
           <br />
           <input
@@ -103,7 +105,7 @@ function ProfilePage() {
             className="update-details-inp"
             placeholder="Enter ID"
             value={profileData.ID}
-            onChange={(e) => setProfileData({ ...profileData, NAME: e.target.value })}
+            onChange={(e) => setProfileData({ ...profileData, id: e.target.value })}
           />
           <br />
           <button className="feedback-submit-btn" onClick={handleEdit}>Update</button>

@@ -1,21 +1,75 @@
 import NavBar from "../UniversalComponents/NavBar";
+import React, { useState, useEffect } from "react";
+
 import "./InstructorStyle.css";
 import { Link } from "react-router-dom";
+import CreateTable from "./components/CreateTable";
+// import "./AccountPage.css";
+import TableEntries from "./components/TableEntries";
 // import Header from './components/UniversalComponents/Header';
 
 function App() {
+  const [courseData, setCourseData] = useState([]);
+  // const [error, setError] = useState(null);
+  useEffect(() => {
+    fetch("http://localhost/backend/coursedata.php", {
+      credentials: "include",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`Response status is not 200: ${response.status}`);
+        }
+      })
+      .then((data) => setCourseData(data))
+      // .catch((error) => setError(error));
+  }, []);
+  // if (error) {
+  //   // Handle the error condition, e.g., server is down
+  //   return <div>Access Denied: Server is not responding.</div>;
+  // }
+
+  const deleteUser = (id) => {
+    console.log(id);
+    fetch(`http://localhost/backend/deletecourse.php?id=${id}`)
+      .then((response) => response.json())
+      .then(() => {
+        setCourseData(courseData.filter((data) => data.CODE !== id));
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="ih-mainBody">
-      <div className="pageFormat">
-        <NavBar x="instructorNav" />
-      </div>
-      <br />
-      <br />
+      <NavBar x="instructorNav" />
+      <br /><br />
       <div className="studentBody">
         <div className="welcomeMsg">
           Welcome to the <b>Instructor Hub</b>
         </div>
-        <table className="ih-table">
+        <div>
+            View Courses
+            <CreateTable
+
+              data={courseData.map(function mapentries(data) {
+                return (
+                  <TableEntries
+                    nm={data.COURSE}
+                    code={data.CODE}
+                    rno={data.ROOMNUMBER}
+                    time={data.DAY + ', ' + data.CLASSTIME}
+                    dur={data.DURATION}
+                    link={`Courses/${data.CODE}`}
+                    deleteAccount={() => deleteUser(data.CODE)}
+                  />
+                );
+              })}
+            />
+            {/* <a href="/admin/createcourse">
+              <button className="createuser">Create Course</button>
+            </a> */}
+        </div>
+        {/* <table className="ih-table">
           <tr>
             <th className="ih-th">Course</th>
             <th className="ih-th">Course Code</th>
@@ -26,7 +80,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-            <Link to="/Instructor/Courses">Software Design Patterns</Link>
+              <Link to="/Instructor/Courses">Software Design Patterns</Link>
             </td>
             <td className="ih-td">
               <p>CSE5363</p>
@@ -43,7 +97,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-            <Link to="/Instructor/Courses">Cloud Computing</Link>
+              <Link to="/Instructor/Courses">Cloud Computing</Link>
             </td>
             <td className="ih-td">
               <p>CSE5332</p>
@@ -60,7 +114,7 @@ function App() {
           </tr>
           <tr>
             <td className="ih-td">
-            <Link to="/Instructor/Courses">Machine Learning</Link>
+              <Link to="/Instructor/Courses">Machine Learning</Link>
             </td>
             <td className="ih-td">
               <p>CSE6363</p>
@@ -75,9 +129,12 @@ function App() {
               </a>
             </td>
           </tr>
-        </table>
+        </table> */}
         <div className="tempMargin"></div>
-          <Link to="/Instructor/createCourse" className="ic-createAssign"> Create New Course </Link>
+        <Link to="/Instructor/createCourse" className="ic-createAssign">
+          {" "}
+          Create New Course{" "}
+        </Link>
         <br />
         <br />
         <div className="studentLabel">Send Announcement:</div>
