@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");

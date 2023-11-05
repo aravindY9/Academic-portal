@@ -20,11 +20,12 @@ function App() {
   ]);
   const [feedback, setFeedback] = useState([
   ]);
+  const [grades, setgrades] = useState([{}]) 
   const [error, setError] = useState(null);
     // console.log(userId);
     useEffect(() => {
         // Fetch user data using the 'userId' parameter
-        fetch(`http://localhost/QA/fetchUserData.php?id=${studentId}`, {
+        fetch(`http://localhost/A/QA/fetchUserData.php?id=${studentId}`, {
           credentials: 'include',
         })
         .then((response) => {
@@ -36,11 +37,31 @@ function App() {
         })
             .then((data) => {
                 // Set the fetched user data in the state
-                // console.log(data[0]);
+                console.log(data[0]);
                 setUserData(data[0]);
             })
-            .catch((error) => setError(error));
+            .catch((error) => console.log(error));
     }, [studentId]);
+
+    fetch(`http://localhost/A/student/studentgrades.php?id=${studentId}`, {
+      method:"POST",
+      credentials: 'include',
+
+        })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error(`Response status is not 200: ${response.status}`);
+          }
+        })
+            .then((data) => {
+                // Set the fetched user data in the state
+                // console.log("fdd",data);  
+                setgrades(data);
+            })
+            .catch((error) => console.log(error));
+
     // console.log(studentId);
     if (error) {
       // Handle the error condition, e.g., server is down
@@ -79,14 +100,13 @@ function App() {
       </div>
         <br />
       <div className="studentBody">
-        <b>Course: </b>{userData.Course}
         <div className="subContentTxt">
           
           
           <b>Student Name: </b> {userData.Name}
           <br />
          
-          <b>StudentID: </b>{userData.ID}
+          <b>StudentID: </b>{userData.StudentID}
           <br />
           <br />
           <div className="grades">
@@ -97,50 +117,13 @@ function App() {
               <th className="ih-th">Exam Name</th>
               <th className="ih-th">Grade</th>
             </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Quiz-1</p>
-              </td>
-              <td className="ih-td">
-                <p>{userData.Quiz_1}</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Assignment-1</p>
-              </td>
-              <td className="ih-td">
-                <p>{userData.Assignment_1}</p>
-              </td>
-
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Quiz-2</p>
-              </td>
-              <td className="ih-td">
-                <p>{userData.Quiz_2}</p>
-              </td>
-
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Assignment-2</p>
-              </td>
-              <td className="ih-td">
-                <p>{userData.Assignment_2}</p>
-              </td>
-
-            </tr>
-            <tr>
-              <td className="ih-td">
-                <p>Project</p>
-              </td>
-              <td className="ih-td">
-                <p>{userData.Project}</p>
-              </td>
-
-            </tr>
+            {grades.map((data)=>{
+                return <tr>
+                  <td class="table-row-1">{data.examName}</td>
+                  <td class="table-row-1">{data.Grade}/100</td>
+              </tr>
+              })}
+              
           </table>
           <br />
           Provide Feedback: <br />

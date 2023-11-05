@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000"); // Set the origin of your React app
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud"); // Set the origin of your React app
 header("Access-Control-Allow-Methods: POST"); // Specify the allowed HTTP method (in this case, just POST)
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true"); // Enable credentials if needed
@@ -27,9 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $PERMISSION_VALUE = $data['PERMISSION_VALUE'];
 
     $dbHost = '51.81.160.154';
-    $dbName = 'sxv0451_qaprofile';
-    $dbUser = 'sxv0451_sanjay';
-    $dbPass = 'JusticeLeague';
+    $dbName = 'axv9331_phase3';
+    $dbUser = 'axv9331_phase3';
+    $dbPass = 'Group24_WDM';
 
 
     $mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Prepare and execute an SQL UPDATE statement
-    $sql = "UPDATE users SET NAME=?, TYPE=?, email=?, PERMISSION_NAME=?, PERMISSION_VALUE=? WHERE id=?";
+    $sql = "UPDATE users SET NAME=?, PERMISSION_NAME=?, PERMISSION_VALUE=? WHERE id=?";
     $stmt = $mysqli->prepare($sql);
 
     if (!$stmt) {

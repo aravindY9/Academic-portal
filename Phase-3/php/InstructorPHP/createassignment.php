@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -21,25 +21,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $max = $data['MAXSCORE'];
     $course = $data['CourseCode'];
     $instructor = $data['InstructorID'];
+    $id = $data['AssignmentID'];
+    $due = $data['DUE'];
 
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "instructor";
+    $host = '51.81.160.154';
+    $database = 'axv9331_phase3';
+    $username = 'axv9331_phase3';
+    $password = 'Group24_WDM';
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO courses (NAME, LINK, MAXSCORE, CourseCode, InstructorID) 
-                VALUES (:LINK, :MAXSCORE, :CourseCode, :InstructorID)";
+        $sql = "INSERT INTO assignments (DUE, NAME, LINK, MAXSCORE, CourseCode, InstructorID, AssignmentID) 
+                VALUES (:DUE, :NAME, :LINK, :MAXSCORE, :CourseCode, :InstructorID, :AssignmentID)";
         $stmt = $pdo->prepare($sql);
         
         $stmt->bindParam(':LINK', $link);
+        $stmt->bindParam(':DUE', $due);
+
         $stmt->bindParam(':MAXSCORE', $max);
         $stmt->bindParam(':NAME', $name);
         $stmt->bindParam(':CourseCode', $course);
         $stmt->bindParam(':InstructorID', $instructor);
+        $stmt->bindParam(':AssignmentID', $id);
+
+
 
         $stmt->execute();
 

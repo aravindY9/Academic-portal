@@ -6,7 +6,7 @@ function ProfilePage() {
   const [profileData, setProfileData] = useState([]);
   const [error, setError] = useState(null);
   useEffect(() => {
-    fetch('http://localhost/backend/profile.php', {
+    fetch('http://localhost/A/admin/profile.php', {
       credentials: 'include',
     })
     .then((response) => {
@@ -24,6 +24,7 @@ function ProfilePage() {
   }, []); 
   if (error) {
     // Handle the error condition, e.g., server is down
+    console.log(error);
     return <div>Access Denied: Server is not responding.</div>;
   }
 
@@ -34,7 +35,7 @@ function ProfilePage() {
         id: profileData.ID,
         NAME: profileData.NAME,
         TYPE: profileData.TYPE,
-        email: profileData.email,
+        EMAIL: profileData.EMAIL,
         PERMISSION_NAME: profileData.PERMISSION_NAME,
         PERMISSION_VALUE: profileData.PERMISSION_VALUE,
     };
@@ -74,7 +75,7 @@ function ProfilePage() {
           Admin Details:
           <div className="sub-content-txt">
             <b>Name:</b> {profileData.NAME} <br />
-            <b>Email:</b> {profileData.email} <br />
+            <b>EMAIL:</b> {profileData.EMAIL} <br />
             <b>UTA ID:</b> {profileData.ID}
           </div>
         </div>
@@ -95,9 +96,9 @@ function ProfilePage() {
           <input
             type="text"
             className="update-details-inp"
-            placeholder="Enter email"
-            value={profileData.email}
-            onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+            placeholder="Enter EMAIL"
+            value={profileData.EMAIL}
+            onChange={(e) => setProfileData({ ...profileData, EMAIL: e.target.value })}
           />
           <br />
           <input

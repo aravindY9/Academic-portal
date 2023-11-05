@@ -6,7 +6,7 @@ function ProfilePage() {
   const [profileData, setProfileData] = useState([]);
   const [error, setError] = useState(null);
   useEffect(() => {
-    fetch('http://localhost/QA/profile.php', {
+    fetch('http://localhost/A/QA/profile.php', {
       credentials: 'include',
     })
     .then((response) => {
@@ -17,7 +17,7 @@ function ProfilePage() {
       }
     })
       .then((data) => {
-        // console.log(data); // Log the response
+        console.log(data); // Log the response
         setProfileData(data[0]);
       })
       .catch((error) => setError(error));
@@ -34,13 +34,13 @@ function ProfilePage() {
         id: profileData.ID,
         NAME: profileData.NAME,
         TYPE: profileData.TYPE,
-        email: profileData.email,
+        EMAIL: profileData.EMAIL,
         PERMISSION_NAME: profileData.PERMISSION_NAME,
         PERMISSION_VALUE: profileData.PERMISSION_VALUE,
     };
     console.log(JSON.stringify(updatedProfileData));
     // Send a POST request to update the user data
-    fetch(`http://localhost/QA/updateUserData.php`, {
+    fetch(`http://localhost/A/QA/updateUserData.php`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ function ProfilePage() {
           Admin Details:
           <div className="sub-content-txt">
             <b>Name:</b> {profileData.NAME} <br />
-            <b>Email:</b> {profileData.email} <br />
+            <b>Email:</b> {profileData.EMAIL} <br />
             <b>UTA ID:</b> {profileData.ID}
           </div>
         </div>
@@ -96,8 +96,8 @@ function ProfilePage() {
             type="text"
             className="update-details-inp"
             placeholder="Enter email"
-            value={profileData.email}
-            onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+            value={profileData.EMAIL}
+            onChange={(e) => setProfileData({ ...profileData, EMAIL: e.target.value })}
           />
           <br />
           <input
@@ -108,7 +108,7 @@ function ProfilePage() {
             onChange={(e) => setProfileData({ ...profileData, id: e.target.value })}
           />
           <br />
-          <button className="feedback-submit-btn" onClick={handleEdit}>Update</button>
+          <button className="feedback-submit-btn">Update</button>
         </div>
         <br />
         <br />

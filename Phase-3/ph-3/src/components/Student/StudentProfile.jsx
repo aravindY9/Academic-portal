@@ -9,7 +9,7 @@ function ProfilePage() {
   const [profileData, setProfileData] = useState([]);
   const [error, setError] = useState(null);
   useEffect(() => {
-    fetch('http://localhost/student/fetchStudentDetails.php', {
+    fetch('http://localhost/A/student/fetchStudentDetails.php', {
       credentials: 'include',
     })
     .then((response) => {
@@ -20,13 +20,14 @@ function ProfilePage() {
       }
     })
       .then((data) => {
-        // console.log(data); // Log the response
+        console.log(data); // Log the response
         setProfileData(data[0]);
       })
       .catch((error) => setError(error));
   }, []); 
   if (error) {
     // Handle the error condition, e.g., server is down
+    console.log(error);
     return <div>Access Denied: Server is not responding.</div>;
   }
 
@@ -34,15 +35,14 @@ function ProfilePage() {
   const handleEdit = () => {
     // Define the updated user data
     const updatedProfileData = {
-        studentID: profileData.ID,
-        name: profileData.NAME,
-        // TYPE: profileData.TYPE,
-        email: profileData.email,
-        phone: profileData.phone
+        StudentID : profileData.StudentID,
+        Name: profileData.Name,
+        Email: profileData.Email,
+        Phone: profileData.Phone
     };
-    // console.log(JSON.stringify(updatedProfileData));
+    console.log(JSON.stringify(updatedProfileData),"sanjay");
     // Send a POST request to update the user data
-    fetch('http://localhost/ph-3/updateProfile.php', {
+    fetch('http://localhost/A/student/updateProfile.php', {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function ProfilePage() {
           if (data.message) {
               // Handle a successful update
               // alert(data.message);
-              navigate("/student/profile");
+              navigate("/Student/StudentProfile");
           } else {
               // Handle errors
               alert(data.error);
@@ -71,11 +71,11 @@ function ProfilePage() {
       <NavBar x="indexNav" />
       <div className="homepage-content">
         <div className="homepage-content-txt">
-          Admin Details:
+          Student Details:
           <div className="sub-content-txt">
-            <b>Name:</b> {profileData.NAME} <br />
-            <b>Email:</b> {profileData.email} <br />
-            <b>UTA ID:</b> {profileData.ID}
+            <b>Name:</b> {profileData.Name} <br />
+            <b>Email:</b> {profileData.Email} <br />
+            <b>UTA ID:</b> {profileData.StudentID}
           </div>
         </div>
       </div>
@@ -88,24 +88,24 @@ function ProfilePage() {
             type="text"
             className="update-details-inp"
             placeholder="Enter name"
-            value={profileData.NAME}
-            onChange={(e) => setProfileData({ ...profileData, NAME: e.target.value })}
+            value={profileData.Name}
+            onChange={(e) => setProfileData({ ...profileData, Name: e.target.value })}
           />
           <br />
           <input
             type="text"
             className="update-details-inp"
             placeholder="Enter email"
-            value={profileData.email}
-            onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
+            value={profileData.Email}
+            onChange={(e) => setProfileData({ ...profileData, Email: e.target.value })}
           />
           <br />
           <input
             type="text"
             className="update-details-inp"
             placeholder="Enter phone"
-            value={profileData.ID}
-            onChange={(e) => setProfileData({ ...profileData, phone: e.target.value })}
+            value={profileData.StudentID}
+            onChange={(e) => setProfileData({ ...profileData, Phone: e.target.value })}
           />
           <br />
           <button className="feedback-submit-btn" onClick={handleEdit}>Update</button>

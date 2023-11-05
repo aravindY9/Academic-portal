@@ -23,9 +23,10 @@ instructorname:"",
 instructormail:""}
   ]);
   const [error, setError] = useState(null);
+  const [feedbackData, setFeedbackData] = useState([{}])
   useEffect(() => {
     // Fetch user data using the 'userId' parameter
-    fetch(`http://localhost/QA/fetchCourseData.php?id=${courseID}`, {
+    fetch(`http://localhost/A/QA/fetchCourseData.php?id=${courseID}`, {
       credentials: 'include',
     })
     .then((response) => {
@@ -37,7 +38,7 @@ instructormail:""}
     })
         .then((data) => {
             // Set the fetched user data in the state
-            // console.log(data[0]);
+            console.log(data);
             setUserData(data[0]);
         })
         .catch((error) => setError(error))
@@ -47,8 +48,51 @@ instructormail:""}
 // console.log(userData);
 if (error) {
   // Handle the error condition, e.g., server is down
+  // console.log(error);
   return <div>Access Denied: Server is not responding.</div>;
 }
+const upload = () => {
+  const updatedfeedbackData = {
+    ID: feedbackData.ID,
+    FEEDBACK: feedbackData.FEEDBACK,
+  };
+  console.log(JSON.stringify(feedbackData));
+  fetch(`http://localhost/InstructorPHP/createfeedback.php`, {
+    method: "POST",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedfeedbackData),
+    credentials: "include",
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      // Check for empty response
+      if (response.status === 204) {
+        return null; // No content
+      }
+      return response.json(); // Parse JSON response
+    })
+    .then((data) => {
+      if (data === "Success") {
+        alert(data);
+        // navigate(`/Instructor/GradeStudent/${gradeData.StudentID}`);
+      } else {
+        alert(data.split(":")[2]);
+      }
+    })
+    .catch((error) => {
+      console.error("Error updating user data:", error);
+    });
+};
+console.log(JSON.stringify(feedbackData));
+
+const updateField = (field, value) => {
+  setFeedbackData({ ...feedbackData, [field]: value });
+};
   return (
     <div className="mainBody">
       <div className="pageFormat">
@@ -64,15 +108,13 @@ if (error) {
           <option value="">CSE 6363</option>
         </select>
         <br /> */}
-        Course: {userData.coursecode}
+        Course: {userData.CODE}
         <div className="subContentTxt">
-          {userData.Coursename}
+          {userData.COURSE}
           <br />
-          <b>Instructor: </b> {userData.Instructorname}
+          <b>InstructorID: </b> {userData.INSTRUCTORID}
           <br />
-          <b>Email: </b> {userData.Instructormail}
-          <br />
-          <b>Room: </b>{userData.roomnumber} <br />
+          <b>Room: </b>{userData.ROOMNUMBER} <br />
           <br />
           {/* <a href="" className="syllabus">
             Download Syllabus
@@ -95,7 +137,7 @@ if (error) {
                 <p>Quiz-1</p>
               </td>
               <td className="t-td">
-                <p>{userData.quiz1}</p>
+                <p>92</p>
               </td>
             </tr>
             <tr>
@@ -103,7 +145,7 @@ if (error) {
                 <p>Assignment-1</p>
               </td>
               <td className="t-td">
-                <p>{userData.assignment1}</p>
+                <p>90</p>
               </td>
             </tr>
             <tr>
@@ -111,7 +153,7 @@ if (error) {
                 <p>Quiz-2</p>
               </td>
               <td className="t-td">
-                <p>{userData.quiz2}</p>
+                <p>87</p>
               </td>
             </tr>
             <tr>
@@ -119,7 +161,7 @@ if (error) {
                 <p>Assignment-2</p>
               </td>
               <td className="t-td">
-                <p>{userData.assignment2}</p>
+                <p>75</p>
               </td>
             </tr>
             <tr>
@@ -127,23 +169,31 @@ if (error) {
                 <p>Project</p>
               </td>
               <td className="t-td">
-                <p>{userData.project}</p>
+                <p>92</p>
               </td>
             </tr>
           </table><br />
           Provide Feedback: <br />
+          <input
+            type="number"
+            placeholder="Recipient ID"
+            className="ice-input"
+            onChange={(e) => updateField("ID", e.target.value)}
+          />{" "}
+          <br />
           <textarea
             name=""
             id=""
             cols="30"
             rows="10"
-            className="ih-txtarea"
+            className="ice-input"
             placeholder="Enter Feedback"
+            onChange={(e) => updateField("FEEDBACK", e.target.value)}
           ></textarea>
           <br />
-          <a href="" className="ic-createAssign">
+          <button type="submit" className="ic-createAssign" onClick={upload}>
             Submit Feedback
-          </a>
+          </button>
         </div>
       </div>
     </div>

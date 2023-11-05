@@ -6,8 +6,8 @@ import React, { useEffect, useState } from "react";
 
 function App() {
   const [feedback, setFeedback] = useState([{
-    id:"",
-    content:""
+    ID:"",
+    FEEDBACK:""
   }
   ]);
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ function App() {
       return data;
   }
   useEffect(() => {
-    fetch("http://localhost/student/fetchfeedback.php", {
+    fetch("http://localhost/A/student/fetchfeedback.php", {
       credentials: 'include',
     })
       .then((response) => {
@@ -38,7 +38,7 @@ function App() {
     const id = feedback.id;
     const content = feedback.content;
     console.log(JSON.stringify({id, content}));
-    fetch('http://localhost/QA/submitFeedback.php', {
+    fetch('http://localhost/A/QA/submitFeedback.php', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -80,8 +80,8 @@ function App() {
           </div>
         </div>
         Provide Feedback: <br />
-          <input type="number" placeholder="Enter ID" className="formInput" value={feedback.id} onChange={(e) => setFeedback({ ...feedback, id: e.target.value })}/>
-          <textarea name="" id="" cols="30" rows="10" className="ih-txtarea" placeholder="Enter Feedback" maxLength={512} value={feedback.content} onChange={(e) => setFeedback({ ...feedback, content: e.target.value })}></textarea><br />
+          <input type="number" placeholder="Enter ID" className="formInput" value={feedback.ID} onChange={(e) => setFeedback({ ...feedback, ID: e.target.value })}/>
+          <textarea name="" id="" cols="30" rows="10" className="ih-txtarea" placeholder="Enter Feedback" maxLength={512} value={feedback.FEEDBACK} onChange={(e) => setFeedback({ ...feedback, FEEDBACK: e.target.value })}></textarea><br />
           <button onClick={submitFeedback}>Submit Feedback</button>
       </div>
     </div>

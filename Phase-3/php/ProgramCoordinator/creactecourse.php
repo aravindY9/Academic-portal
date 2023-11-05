@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -23,10 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $syllabus = $data['SYLLABUS'];
     $time = $data['TIME'];
     $objective = $data['OBJECTIVE'];
+ 
+
     $host = '51.81.160.154';
-    $database = 'sxv0451_site';
-    $username = 'sxv0451_sanjay';
-    $password = 'JusticeLeague';
+$database = 'axv9331_phase3';
+$username = 'axv9331_phase3';
+$password = 'Group24_WDM';
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);

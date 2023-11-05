@@ -33,8 +33,9 @@ function App() {
       CLASSTIME: courseData.CLASSTIME,
       OBJECTIVE: courseData.OBJECTIVE,
     };
+    console.log(JSON.stringify(updatedCourseData))
 
-    fetch(`http://localhost/backend/creactecourse.php`, {
+    fetch(`http://localhost/A/InstructorPHP/creactecourse.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +65,6 @@ function App() {
         console.error("Error updating user data:", error);
       });
   };
-
   // Helper function to update the state when a field changes
   const updateField = (field, value) => {
     setCourseData({ ...courseData, [field]: value });
@@ -104,7 +104,7 @@ function App() {
           type="text"
           placeholder="Enter Instructor ID"
           className="ice-input"
-          onChange={(e) => updateField("CLASSTIME", e.target.value)}
+          onChange={(e) => updateField("INSTRUCTORID", e.target.value)}
         />{" "}
         <br />
         <input
@@ -143,8 +143,8 @@ function App() {
           onChange={(e) => updateField("OBJECTIVE", e.target.value)}
         ></textarea>
         <br />
-        <button type="submit" className="edit-course" onClick={upload}>
-          Submit
+        <button type="submit" className="ic-createAssign" onClick={upload}>
+          Create Course
         </button>
       </div>
     </div>

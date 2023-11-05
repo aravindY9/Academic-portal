@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud/");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
@@ -32,10 +32,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password2 = $data['Password2'];
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
     
-    $host = "localhost"; // Your database host
-    $username = "root"; // Your database username
-    $password = ""; // Your database password
-    $database = "site"; // Your database name
+    $host = '51.81.160.154';
+    $database = 'axv9331_phase3';
+    $username = 'axv9331_phase3';
+    $password = 'Group24_WDM';
+
+    // $host = "localhost"; // Your database host
+    // $username = "root"; // Your database username
+    // $password = ""; // Your database password
+    // $database = "site"; // Your database name
 
     try {
         // Create a PDO connection to the database

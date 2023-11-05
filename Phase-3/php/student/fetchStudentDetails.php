@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
@@ -14,9 +14,9 @@ if(!isset($_SESSION["id"])){
 // $_SESSION['test'] = 'Hello, world!';
 // echo json_encode($_SESSION);
 $dbHost = '51.81.160.154';
-$dbName = 'sxv0451_site';
-$dbUser = 'sxv0451_sanjay';
-$dbPass = 'JusticeLeague';
+$dbName = 'axv9331_phase3';
+$dbUser = 'axv9331_phase3';
+$dbPass = 'Group24_WDM';
 // $email=$_SESSION["email"];
 // $email = 'asj2389@mavs.uta.edu';
 // echo $email;
@@ -27,7 +27,7 @@ try {
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
-$sql = "SELECT * FROM users where ID='$id'";
+$sql = "SELECT * FROM students where StudentID='$id'";
 $stmt = $pdo->query($sql);
 $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // header("Content-Type: application/json");

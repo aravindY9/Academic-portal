@@ -8,7 +8,7 @@ function AccountPage() {
     const [accountData, setAccountData] = useState([]);
     const [error, setError] = useState(null);
     useEffect(() => {
-        fetch("http://localhost/backend/api.php", {
+        fetch("http://localhost/A/admin/api.php", {
           credentials: 'include',
         })
           .then((response) => {
@@ -27,7 +27,7 @@ function AccountPage() {
         return <div>Access Denied: Server is not responding.</div>;
       }
     const deleteUser = (id) => {
-        fetch(`http://localhost/backend/deleteuser.php?id=${id}`)
+        fetch(`http://localhost/A/admin/deleteuser.php?id=${id}`)
             .then((response) => response.json())
             .then(() => {
                 setAccountData(accountData.filter((data) => data.id !== id));
@@ -49,12 +49,12 @@ function AccountPage() {
                     data={accountData.map(function mapentries(data) {
                         return (
                             <TableEntries
-                                key={data.id}
-                                name={data.name}
-                                id={data.id}
-                                info={data.type}
-                                edit={`/admin/editaccount/${data.id}`}
-                                deleteAccount={() => deleteUser(data.id)}
+                                key={data.ID}
+                                name={data.NAME}
+                                id={data.ID}
+                                info={data.TYPE}
+                                edit={`/admin/editaccount/${data.ID}`}
+                                deleteAccount={() => deleteUser(data.ID)}
                             />
                         );
                     })}

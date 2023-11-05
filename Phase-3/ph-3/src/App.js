@@ -93,7 +93,7 @@ function App() {
         <Route path="/Instructor/editExam" element={<InstructorEditExam/>} />
         <Route path="/Instructor/createAssignment" element={<InstructorCreateAssignment/>} />
         <Route path="/Instructor/editAssignment" element={<InstructorEditAssignment/>} />
-        <Route path="/Instructor/gradeStudent" element={<InstructorGradeStudent/>} />
+        <Route path="/Instructor/gradeStudent/:studentID" element={<InstructorGradeStudent/>} />
         <Route path="/Instructor/chat" element={<InstructorChat/>} />
         <Route path="/Instructor/createCourse" element={<InstructorCreateCourse/>} />
         <Route path="/Instructor/profile" element={<InstructorProfile/>} />
@@ -115,7 +115,7 @@ function App() {
         <Route path="/program/profile" element={<ProgramProfile />} />
         <Route path="/program/chat" element={<ProgramChat />} />
         <Route path="/Program/course" element={<ProgramCourse />} />
-        <Route path="/Program/viewperformance/:StudentId" element={<ProgramViewPerformance />} />
+        <Route path="/Program/viewperformance/:studentId" element={<ProgramViewPerformance />} />
 
         {/* QA Routes */}
         <Route path="/qa" element={<QAHome />} />

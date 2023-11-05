@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
@@ -31,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // $password = $data['Password'];
     // $password2 = $data['Password2'];
     $password_hash = password_hash("password123", PASSWORD_DEFAULT);
-    $host = '51.81.160.154';
-    $database = 'sxv0451_site';
-    $username = 'sxv0451_sanjay';
-    $password = 'JusticeLeague';
 
+    $host = '51.81.160.154';
+$database = 'axv9331_phase3';
+$username = 'axv9331_phase3';
+$password = 'Group24_WDM';
     try {
         // Create a PDO connection to the database
         $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);

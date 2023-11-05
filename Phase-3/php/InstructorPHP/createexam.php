@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -16,38 +16,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die(json_encode(array("error" => "Invalid data received")));
     }
 
-    $course = $data['COURSE'];
-    $code = $data['CODE'];
-    $instructor = $data['INSTRUCTORID'];
-    $room = $data['ROOMNUMBER'];
-    $day = $data['DAY'];
-    $duration = $data['DURATION'];
-    $syllabus = $data['SYLLABUS'];
-    $time = $data['CLASSTIME'];
-    $objective = $data['OBJECTIVE'];
+    $name = $data['NAME'];
+    $id = $data['ExamID'];
+    $max = $data['MAXSCORE'];
+    $course = $data['CourseCode'];
+    $instructor = $data['InstructorID'];
+    $date = $data['DATE'];
 
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "instructor";
+
+    $host = '51.81.160.154';
+    $username = 'axv9331_phase3';
+    $database = 'axv9331_phase3';
+    $password = 'Group24_WDM';
 
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO courses (COURSE, CODE, INSTRUCTORID, ROOMNUMBER, DAY, DURATION, SYLLABUS, CLASSTIME, OBJECTIVE) 
-                VALUES (:COURSE, :CODE, :INSTRUCTORID, :ROOMNUMBER, :DAY, :DURATION, :SYLLABUS, :CLASSTIME, :OBJECTIVE)";
+        $sql = "INSERT INTO exams (NAME, ExamID, MAXSCORE, CourseCode, InstructorID, DATE) 
+                VALUES (:NAME, :ExamID, :MAXSCORE, :CourseCode, :InstructorID, :DATE)";
         $stmt = $pdo->prepare($sql);
         
-        $stmt->bindParam(':COURSE', $course);
-        $stmt->bindParam(':CODE', $code);
-        $stmt->bindParam(':INSTRUCTORID', $instructor);
-        $stmt->bindParam(':ROOMNUMBER', $room);
-        $stmt->bindParam(':DAY', $day);
-        $stmt->bindParam(':DURATION', $duration);
-        $stmt->bindParam(':SYLLABUS', $syllabus);
-        $stmt->bindParam(':CLASSTIME', $time);
-        $stmt->bindParam(':OBJECTIVE', $objective);
+        $stmt->bindParam(':NAME', $name);
+        $stmt->bindParam(':MAXSCORE', $max);
+        $stmt->bindParam('ExamID', $id);
+        $stmt->bindParam(':CourseCode', $course);
+        $stmt->bindParam(':InstructorID', $instructor);
+        $stmt->bindParam(':DATE', $date);
+
 
         $stmt->execute();
 

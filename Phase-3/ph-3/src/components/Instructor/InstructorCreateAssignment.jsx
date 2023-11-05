@@ -8,23 +8,26 @@ import "./InstructorStyle.css";
 function App() {
   const navigate = useNavigate();
   const [assignData, setAssignData] = useState({
+    AssignmentID: '',
     LINK: "",
     MAXSCORE: "",
     NAME: "",
     CourseCode: "",
-    Instructor: "",
+    DUE: '',
+    InstructorID: "",
   });
-
   const upload = () => {
     const updatedAssignData = {
+      AssignmentID: assignData.AssignID,
       LINK: assignData.LINK,
       MAXSCORE: assignData.MAXSCORE,
       NAME: assignData.NAME,
+      DUE: assignData.DUE,
       CourseCode: assignData.CourseCode,
-      Instructor: assignData.Instructor,
+      InstructorID: assignData.InstructorID,
     };
 
-    fetch(`http://localhost/backend/creacteassignment.php`, {
+    fetch(`http://localhost/A/InstructorPHP/createassignment.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +48,7 @@ function App() {
       .then((data) => {
         if (data === "Success") {
           alert(data);
-          navigate("/Instructor");
+          navigate(`/Instructor/Courses/${assignData.CourseCode}`);
         } else {
           alert(data.split(":")[2]);
         }
@@ -53,8 +56,14 @@ function App() {
       .catch((error) => {
         console.error("Error updating user data:", error);
       });
+      console.log(JSON.stringify(assignData));
+
   };
   console.log(assignData);
+  // Helper function to update the state when a field changes
+  const updateField = (field, value) => {
+    setAssignData({ ...assignData, [field]: value });
+  };
   return (
     <div className="sfe-mainBody">
       <div className="pageFormat">
@@ -68,43 +77,50 @@ function App() {
           type="text"
           placeholder="Enter assignment name"
           className="ice-input"
-          onChange={(e) => setAssignData("NAME", e.target.value)}
-        />
+          onChange={(e) => updateField("NAME", e.target.value)}
+        />{" "}
+        <br />
+        <input
+          type="text"
+          placeholder="Enter assignment ID"
+          className="ice-input"
+          onChange={(e) => updateField("AssignID", e.target.value)}
+        />{" "}
         <br />
         <input
           type="text"
           placeholder="Enter assignment link"
           className="ice-input"
-          onChange={(e) => setAssignData("LINK", e.target.value)}
-        />
+          onChange={(e) => updateField("LINK", e.target.value)}
+        />{" "}
         <br />
         <input
           type="number"
           placeholder="Enter max score"
           className="ice-input"
-          onChange={(e) => setAssignData("MAXSCORE", e.target.value)}
+          onChange={(e) => updateField("MAXSCORE", e.target.value)}
         />{" "}
         <br />
         <input
-          type="number"
+          type="text"
           placeholder="Enter Instructor ID"
           className="ice-input"
-          onChange={(e) => setAssignData("InstructorID", e.target.value)}
+          onChange={(e) => updateField("InstructorID", e.target.value)}
         />{" "}
         <br />
         <input
           type="text"
           placeholder="Enter Course Code"
           className="ice-input"
-          onChange={(e) => setAssignData("CourseCode", e.target.value)}
+          onChange={(e) => updateField("CourseCode", e.target.value)}
         />{" "}
         <br />
         <input
-          type="date"
-          placeholder="Enter exam date"
+          type="text"
+          placeholder="Enter exam date (YYYY-MM-DD)"
           className="ice-input"
-          onChange={(e) => setAssignData("DUE", e.target.value)}
-        />
+          onChange={(e) => updateField("DUE", e.target.value)}
+        />{" "}
         <br />
         <button type="submit" className="ic-createAssign" onClick={upload}>
         Create Assignment

@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -8,10 +8,10 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
     // Step 1: Set up a database connection
-    $host = "localhost"; // Replace with your database host
-    $username = "root"; // Replace with your database username
-    $password = ""; // Replace with your database password
-    $database = "site"; // Replace with your database name
+    $host = '51.81.160.154';
+    $username = 'axv9331_phase3';
+    $database = 'axv9331_phase3';
+    $password = 'Group24_WDM'; // Replace with your database name
 
     $connection = mysqli_connect($host, $username, $password, $database);
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud/");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 // header("Access-Control-Allow-Credentials: true");    
@@ -29,12 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $data['email'];
     $PERMISSION_NAME = $data['PERMISSION_NAME'];
     $PERMISSION_VALUE = $data['PERMISSION_VALUE'];
-
-    // Create a database connection
-    $host = "localhost";
-    $username = "root"; // Replace with your database username
-    $password = ""; // Replace with your database password
-    $database = "site"; // Replace with your database name
+    
+    
+    $host = '51.81.160.154';
+$database = 'axv9331_phase3';
+$username = 'axv9331_phase3';
+$password = 'Group24_WDM';
+    
     $mysqli = new mysqli($host, $username, $password, $database);
 
     if ($mysqli->connect_error) {

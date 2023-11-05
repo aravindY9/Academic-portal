@@ -1,12 +1,12 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
-// if (!isset($_SESSION["email"])) {
-//     die(json_encode(array("error" => "Unauthorized"))); // Return a JSON error response
-// }
+if (!isset($_SESSION["id"])) {
+    die(json_encode(array("error" => "Unauthorized"))); // Return a JSON error response
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
     // Respond to preflight requests (sent by the browser before the actual request)
@@ -32,10 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // $password2 = $data['Password2'];
     $password_hash = password_hash("password123", PASSWORD_DEFAULT);
     
-    $host = "localhost"; // Your database host
-    $username = "root"; // Your database username
-    $password = ""; // Your database password
-    $database = "site"; // Your database name
+    $host = '51.81.160.154';
+    $username = 'axv9331_phase3';
+    $database = 'axv9331_phase3';
+    $password = 'Group24_WDM'; // Your database name
 
     try {
         // Create a PDO connection to the database

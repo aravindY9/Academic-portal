@@ -9,7 +9,7 @@ function App() {
   const [accountData, setAccountData] = useState([]);
   const [error, setError] = useState(null);
   useEffect(() => {
-      fetch("http://localhost/QA/api.php", {
+      fetch("http://localhost/A/QA/api.php", {
         credentials: 'include',
       })
       .then((response) => {
@@ -54,8 +54,6 @@ function App() {
             <tr>
               <th className="ih-th">Name</th>
               <th className="ih-th">ID</th>
-              <th className="ih-th">Course</th>
-              <th className="ih-th">Grade</th>
               <th className="ih-th">Actions</th>
             </tr>
             
@@ -68,14 +66,10 @@ function App() {
                                   <p>{data.Name}</p>
                                 </td>
                                 <td className="ih-td">
-                                  <p>{data.ID}</p>
-                                </td>
-                                <td className="ih-td">{data.Course}</td>
-                                <td className="ih-td">
-                                  <p>{data.Grade}</p>
+                                  <p>{data.StudentID}</p>
                                 </td>
                                 <td className="ih-td">
-                                  <Link to={`/qa/studentperformance/${data.ID}`}>View</Link>
+                                  <Link to={`/qa/studentperformance/${data.StudentID}`}>View</Link>
                                 </td>
                               </tr>
 

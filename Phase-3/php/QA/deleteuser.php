@@ -6,9 +6,9 @@ if (isset($_GET['id'])) {
     // Step 1: Set up a database connection
     // Replace with your database name
     $dbHost = '51.81.160.154';
-    $dbName = 'sxv0451_qaprofile';
-    $dbUser = 'sxv0451_sanjay';
-    $dbPass = 'JusticeLeague';
+    $dbName = 'axv9331_phase3';
+    $dbUser = 'axv9331_phase3';
+    $dbPass = 'Group24_WDM';
 
     $connection = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName);
 

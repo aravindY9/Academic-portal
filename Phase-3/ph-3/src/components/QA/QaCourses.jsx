@@ -18,7 +18,7 @@ function App() {
   const [error, setError] = useState(null);
   useEffect(() => {
     // Fetch user data using the 'userId' parameter
-    fetch(`http://localhost/QA/coursedata.php`, {
+    fetch(`http://localhost/A/QA/coursedata.php`, {
       credentials: 'include',
     })
     .then((response) => {
@@ -30,7 +30,7 @@ function App() {
     })
         .then((data) => {
             // Set the fetched user data in the state
-            // console.log(data[0]);
+            console.log(data);
             setUserData(data);
         })
         .catch((error) => setError(error));
@@ -63,9 +63,7 @@ if (error) {
             <tr>
               <th className="ih-th">Course</th>
               <th className="ih-th">Course Code</th>
-              <th className="ih-th">Number of Students</th>
               <th className="ih-th">Room Number</th>
-              <th className="ih-th">Avg Grades</th>
               <th className="ih-th">Action</th>
             </tr>
             {/* {console.log(userData)} */}
@@ -74,17 +72,15 @@ if (error) {
                         return (
             <tr>
               <td className="ih-td">
-              <>{data.Coursename}</>
+              <>{data.COURSE}</>
               </td>
               <td className="ih-td">
-                <p>{data.coursecode}</p>
+                <p>{data.CODE}</p>
               </td>
-              <td className="ih-td">{data.numberofstudents}</td>
-              <td className="ih-td">{data.roomnumber}</td>
-              <td className="ih-td">{data.totavggrades}</td>
+              <td className="ih-td">{data.ROOMNUMBER}</td>
               <td className="ih-td">
                 {" "}
-                <Link to={`/qa/coursedetails/${data.coursecode}`} className="ic-ViewButton">
+                <Link to={`/qa/coursedetails/${data.CODE}`} className="ic-ViewButton">
                   View
                 </Link>
               </td>

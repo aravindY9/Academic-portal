@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
@@ -20,10 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $data['email'];
     $password = $data['password'];
 
-    $host = "localhost";
-    $username = "root";
-    $db_password = "";
-    $database = "site";
+    $host = '51.81.160.154';
+    $username = 'axv9331_phase3';
+    $database = 'axv9331_phase3';
+    $db_password = 'Group24_WDM';
+    
 
     $connection = mysqli_connect($host, $username, $db_password, $database);
 
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $sql = "SELECT * FROM users WHERE EMAIL = '$email'";
     $result = mysqli_query($connection, $sql);
 
     if ($result) {
@@ -39,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($user) {
             // User found, check if the password matches from the database
-            $storedPassword = $user['password'];
+            $storedPassword = $user['PASSWORD'];
             if (password_verify($password, $storedPassword)) {
                 session_start();
                 $_SESSION['email'] = $email;

@@ -8,11 +8,13 @@ function CreateCourse() {
     const [courseData, setCourseData] = useState({
         COURSE: "",
         CODE: "",
-        INSTRUCTOR: "",
-        ROOM_NUMBER: "",
+        INSTRUCTORID: "",
+        ROOMNUMBER: "",
         SYLLABUS: "",
-        TIME: "",
+        DURATION: "",
         OBJECTIVE: "",
+        DAY:"",
+        CLASSTIME:""
     });
     const [error, setError] = useState(null);
     // useEffect(() => {
@@ -56,15 +58,17 @@ function CreateCourse() {
     const upload = () => {
         const updatedCourseData = {
             COURSE: courseData.COURSE,
-            CODE: courseData.CODE,
-            INSTRUCTOR: courseData.INSTRUCTOR,
-            ROOM_NUMBER: courseData.ROOM_NUMBER,
-            SYLLABUS: courseData.SYLLABUS,
-            TIME: courseData.TIME,
-            OBJECTIVE: courseData.OBJECTIVE,
+        CODE: courseData.CODE,
+        INSTRUCTORID: courseData.INSTRUCTORID,
+        ROOMNUMBER: courseData.ROOMNUMBER,
+        SYLLABUS: courseData.SYLLABUS,
+        DURATION: courseData.DURATION,
+        OBJECTIVE: courseData.OBJECTIVE,
+        DAY:courseData.DAY,
+        CLASSTIME:courseData.CLASSTIME
         };
-    
-        fetch(`http://localhost/backend/creactecourse.php`, {
+        console.log(JSON.stringify(updatedCourseData));
+        fetch(`http://localhost/A/admin/creactecourse.php`, {
     method: "POST",
     headers: {
         "Content-Type": "application/json",
@@ -110,6 +114,7 @@ function CreateCourse() {
                     type="text"
                     name="course-name"
                     placeholder="Enter course name"
+                    value={courseData.COURSE}
                     onChange={(e) => updateField("COURSE", e.target.value)}
                 />
                 <input
@@ -117,27 +122,32 @@ function CreateCourse() {
                     type="text"
                     name="course-code"
                     placeholder="Enter course code"
+                    value={courseData.CODE}
                     onChange={(e) => updateField("CODE", e.target.value)}
+                    // readOnly
                 /><br />
                 <input
                     className="editinput"
                     type="text"
                     name="course-instructor"
                     placeholder="Enter instructor name"
-                    onChange={(e) => updateField("INSTRUCTOR", e.target.value)}
+                    value={courseData.INSTRUCTORID}
+                    onChange={(e) => updateField("INSTRUCTORID", e.target.value)}
                 />
                 <input
                     className="editinput"
                     type="text"
                     name="room-number"
                     placeholder="Enter room number"
-                    onChange={(e) => updateField("ROOM_NUMBER", e.target.value)}
+                    value={courseData.ROOMNUMBER}
+                    onChange={(e) => updateField("ROOMNUMBER", e.target.value)}
                 /><br />
                 <input
                     className="editinput"
                     type="text"
                     name="syllabus"
                     placeholder="Enter syllabus link"
+                    value={courseData.SYLLABUS}
                     onChange={(e) => updateField("SYLLABUS", e.target.value)}
                 />
                 <input
@@ -145,7 +155,8 @@ function CreateCourse() {
                     type="text"
                     name="meeting-time"
                     placeholder="Enter meeting time"
-                    onChange={(e) => updateField("TIME", e.target.value)}
+                    value={courseData.DAY}
+                    onChange={(e) => updateField("DAY", e.target.value)}
                 /><br />
                 <textarea
                     className="editinput"
@@ -154,6 +165,7 @@ function CreateCourse() {
                     cols="30"
                     rows="10"
                     placeholder="Enter course objectives"
+                    value={courseData.OBJECTIVE}
                     onChange={(e) => updateField("OBJECTIVE", e.target.value)}
                 ></textarea><br />
                 <button type="submit" className="edit-course" onClick={upload}>Submit</button>

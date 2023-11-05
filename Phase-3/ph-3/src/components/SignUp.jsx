@@ -27,7 +27,7 @@ const upload = () => {
   // console.log(JSON.stringify(updatedUserData));
   // Send a POST request to update the user data
   console.log(updatedUserData);
-  fetch(`http://localhost/backend/inserttable.php`, {
+  fetch(`https://axv9331.uta.cloud/php/admin/inserttable.php`, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

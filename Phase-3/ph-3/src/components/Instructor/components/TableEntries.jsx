@@ -25,7 +25,7 @@ function TableEntries(props) {
             <td className="ih-td">
                 <a
                     href="#"
-                    className="delete-link delete"
+                    className="ic-deleteButton"
                     onClick={props.deleteAccount}
                 >
                     Delete

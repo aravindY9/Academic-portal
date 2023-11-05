@@ -7,7 +7,7 @@ function HomePage(){
 
   const [error, setError] = useState(null);
     useEffect(() => {
-        fetch("http://localhost/backend/api.php", {
+        fetch("http://localhost/A/admin/api.php", {
           credentials: 'include',
         })
           .then((response) => {
@@ -23,6 +23,7 @@ function HomePage(){
     
       if (error) {
         // Handle the error condition, e.g., server is down
+        console.log(error);
         return <div>Access Denied: Server is not responding.</div>;
       }
 

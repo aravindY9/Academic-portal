@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000"); // Replace * with the actual domain of your React front-end if needed
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud"); // Replace * with the actual domain of your React front-end if needed
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");
@@ -9,9 +9,9 @@ if(!isset($_SESSION["id"])){
 }
 // Database connection
 $dbHost = '51.81.160.154';
-$dbName = 'sxv0451_qaprofile';
-$dbUser = 'sxv0451_sanjay';
-$dbPass = 'JusticeLeague';
+$dbName = 'axv9331_phase3';
+$dbUser = 'axv9331_phase3';
+$dbPass = 'Group24_WDM';
 try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

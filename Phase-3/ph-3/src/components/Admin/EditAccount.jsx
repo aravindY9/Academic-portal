@@ -16,7 +16,7 @@ function EditAccount() {
     const [error, setError] = useState(null);
     useEffect(() => {
         // Fetch user data using the 'userId' parameter
-        fetch(`http://localhost/backend/fetchUserData.php?id=${userId}`,{
+        fetch(`http://localhost/A/admin/fetchUserData.php?id=${userId}`,{
             credentials:'include',
         })
             .then((response) => response.json())
@@ -99,7 +99,7 @@ function EditAccount() {
                         type="text"
                         name="meeting-time"
                         placeholder="Edit email"
-                        value={userData.email}
+                        value={userData.EMAIL}
                         onChange={(e) => setUserData({ ...userData, email: e.target.value })}
                     /><br />
                     <input

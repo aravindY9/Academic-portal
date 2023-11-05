@@ -9,15 +9,17 @@ function EditCourses() {
     const [courseData, setCourseData] = useState({
         COURSE: "",
         CODE: "",
-        INSTRUCTOR: "",
-        ROOM_NUMBER: "",
+        INSTRUCTORID: "",
+        ROOMNUMBER: "",
         SYLLABUS: "",
-        TIME: "",
+        DURATION: "",
         OBJECTIVE: "",
+        DAY:"",
+        CLASSTIME:""
     });
     const [error, setError] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost/backend/fetchCourseData.php?id=${courseId}`, {
+        fetch(`http://localhost/A/admin/fetchCourseData.php?id=${courseId}`, {
             credentials: 'include',
           })
           .then((response) => {
@@ -51,18 +53,21 @@ function EditCourses() {
     }, [courseId]);
     if (error) {
         // Handle the error condition, e.g., server is down
+        console.log(error);
         return <div>Access Denied: Server is not responding.</div>;
       }
 
     const handleEdit = () => {
         const updatedCourseData = {
             COURSE: courseData.COURSE,
-            CODE: courseData.CODE,
-            INSTRUCTOR: courseData.INSTRUCTOR,
-            ROOM_NUMBER: courseData.ROOM_NUMBER,
-            SYLLABUS: courseData.SYLLABUS,
-            TIME: courseData.TIME,
-            OBJECTIVE: courseData.OBJECTIVE,
+        CODE: courseData.CODE,
+        INSTRUCTORID: courseData.INSTRUCTORID,
+        ROOMNUMBER: courseData.ROOMNUMBER,
+        SYLLABUS: courseData.SYLLABUS,
+        DURATION: courseData.DURATION,
+        OBJECTIVE: courseData.OBJECTIVE,
+        DAY:courseData.DAY,
+        CLASSTIME:courseData.CLASSTIME
         };
         console.log(JSON.stringify(updatedCourseData));
         fetch(`http://localhost/backend/updateCourseData.php`, {
@@ -118,16 +123,16 @@ function EditCourses() {
                     type="text"
                     name="course-instructor"
                     placeholder="Enter instructor name"
-                    value={courseData.INSTRUCTOR}
-                    onChange={(e) => updateField("INSTRUCTOR", e.target.value)}
+                    value={courseData.INSTRUCTORID}
+                    onChange={(e) => updateField("INSTRUCTORID", e.target.value)}
                 />
                 <input
                     className="editinput"
                     type="text"
                     name="room-number"
                     placeholder="Enter room number"
-                    value={courseData.ROOM_NUMBER}
-                    onChange={(e) => updateField("ROOM_NUMBER", e.target.value)}
+                    value={courseData.ROOMNUMBER}
+                    onChange={(e) => updateField("ROOMNUMBER", e.target.value)}
                 /><br />
                 <input
                     className="editinput"
@@ -142,8 +147,8 @@ function EditCourses() {
                     type="text"
                     name="meeting-time"
                     placeholder="Enter meeting time"
-                    value={courseData.TIME}
-                    onChange={(e) => updateField("TIME", e.target.value)}
+                    value={courseData.DAY}
+                    onChange={(e) => updateField("DAY", e.target.value)}
                 /><br />
                 <textarea
                     className="editinput"

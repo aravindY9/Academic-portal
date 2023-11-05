@@ -9,9 +9,9 @@ import TableEntries from "./components/TableEntries";
 
 function App() {
   const [courseData, setCourseData] = useState([]);
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   useEffect(() => {
-    fetch("http://localhost/student/coursedata.php", {
+    fetch("http://localhost/A/student/coursedata.php", {
       credentials: "include",
     })
       .then((response) => {
@@ -22,8 +22,12 @@ function App() {
         }
       })
       .then((data) => setCourseData(data))
-      // .catch((error) => setError(error));
+      .catch((error) => setError(error));
   }, []);
+  if (error) {
+        // Handle the error condition, e.g., server is down
+        return <div>Access Denied: Server is not responding.</div>;
+      }
   console.log(courseData);
   return (
     <div className="mainBody">

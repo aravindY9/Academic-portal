@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $host = "localhost"; // Replace with your database host
     $username = "root"; // Replace with your database username
     $password = ""; // Replace with your database password
-    $database = "site"; // Replace with your database name
+    $database = "abc"; // Replace with your database name
 
     $connection = mysqli_connect($host, $username, $password, $database);
 

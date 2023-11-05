@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Credentials: true");
@@ -18,22 +18,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $course = $data['COURSE'];
     $code = $data['CODE'];
-    $instructor = $data['INSTRUCTOR'];
-    $room = $data['ROOM_NUMBER'];
+    $instructor = $data['INSTRUCTORID'];
+    $room = $data['ROOMNUMBER'];
     $syllabus = $data['SYLLABUS'];
-    $time = $data['TIME'];
+    $time = $data['DAY'];
     $objective = $data['OBJECTIVE'];
 
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "site";
-
+    $host = '51.81.160.154';
+$database = 'axv9331_phase3';
+$username = 'axv9331_phase3';
+$password = 'Group24_WDM';
+    
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "INSERT INTO courses (COURSE, CODE, INSTRUCTOR, ROOM_NUMBER, SYLLABUS, TIME, OBJECTIVE) 
+        $sql = "INSERT INTO courses (COURSE, CODE, INSTRUCTORID, ROOMNUMBER, SYLLABUS,DAY, OBJECTIVE) 
                 VALUES (:COURSE, :CODE, :INSTRUCTOR, :ROOM_NUMBER, :SYLLABUS, :TIME, :OBJECTIVE)";
         $stmt = $pdo->prepare($sql);
         

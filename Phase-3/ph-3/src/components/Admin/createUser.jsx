@@ -13,23 +13,7 @@ function CreateUser() {
         PERMISSION_NAME: "",
         PERMISSION_VALUE: "",
     });
-    const [error, setError] = useState(null);
-    // useEffect(() => {
-    //     // Fetch user data using the 'userId' parameter
-    //     fetch(`http://localhost/backend/fetchUserData.php?id=${userId}`,{
-    //         credentials:'include',
-    //     })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             // Set the fetched user data in the state
-    //             setUserData(data[0]);
-    //         })
-    //         .catch((error) => setError(error));
-    // }, [userId]);
-    // if (error) {
-    //     // Handle the error condition, e.g., server is down
-    //     return <div>Access Denied: Server is not responding.</div>;
-    //   }
+    
     const upload = () => {
         // Define the updated user data
         const updatedUserData = {
@@ -42,7 +26,7 @@ function CreateUser() {
         };
         console.log(JSON.stringify(updatedUserData));
         // Send a POST request to update the user data
-        fetch(`http://localhost/backend/createuser.php`, {
+        fetch(`http://localhost/A/admin/createuser.php`, {
     method: "POST",
     headers: {
         "Content-Type": "application/json",

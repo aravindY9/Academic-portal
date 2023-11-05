@@ -7,7 +7,7 @@ function App() {
 
   const handleLogin = () => {
     // Send a POST request to the PHP script for user authentication
-    fetch('http://localhost/backend/login.php', {
+    fetch('http://localhost/A/admin/login.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

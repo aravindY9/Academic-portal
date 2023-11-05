@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:3000"); // Replace * with the actual domain of your React front-end if needed
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud"); // Replace * with the actual domain of your React front-end if needed
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");

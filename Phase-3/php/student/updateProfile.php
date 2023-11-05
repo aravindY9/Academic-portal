@@ -1,10 +1,10 @@
 <?php
 session_start();
-header("Access-Control-Allow-Origin: http://localhost:3000");
+header("Access-Control-Allow-Origin: https://axv9331.uta.cloud");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token");
 header("Access-Control-Allow-Credentials: true");    
-if (!isset($_SESSION["email"])) {
+if (!isset($_SESSION["id"])) {
     die(json_encode(array("error" => "Unauthorized"))); // Return a JSON error response
 }
 
@@ -17,22 +17,22 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Parse JSON data from the request
     $data = json_decode(file_get_contents("php://input"), true);
-    print_r($data);
+    // print_r($data);
     if (empty($data)) {
         die(json_encode(array("error" => "Invalid data received"))); // Return a JSON error response
     }
 
     // Extract data
-    $phone = $data['phone'];
-    $name = $data['name'];
-    $email = $data['email'];
-    $studentID = $data['studentID'];
-
+    $phone = $data['Phone'];
+    $name = $data['Name'];
+    $email = $data['Email'];
+    $studentID = $data['StudentID'];
+    // print_r($data);
     // Create a database connection
-    $host = "localhost";
-    $username = "root"; // Replace with your database username
-    $password = ""; // Replace with your database password
-    $database = "mavprogram"; // Replace with your database name
+    $host = '51.81.160.154';
+    $username = 'axv9331_phase3';
+    $database = 'axv9331_phase3';
+    $password = 'Group24_WDM';// Replace with your database name
     $mysqli = new mysqli($host, $username, $password, $database);
 
     if ($mysqli->connect_error) {
